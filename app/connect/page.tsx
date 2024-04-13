@@ -23,7 +23,7 @@ function ArrowIcon() {
 export default function Connect() {
     return (
         <div>
-            {/* <div className="flex justify">    <FaXTwitter size={40} /> Twitter</div> */}
+            {/* <div className="flex justify">    <FaXTwitter size={40} /> Twitter</div>
             <FaLinkedin />
             <FaGithub />
             <FaInstagram />
@@ -37,7 +37,7 @@ export default function Connect() {
                         target="_blank"
                         href="/rss"
                     > <FaXTwitter />
-                        {/* <ArrowIcon /> */}
+                        <ArrowIcon />
                         <p className="ml-2 h-7">Twitter</p>
                     </a>
                 </li>
@@ -64,6 +64,7 @@ export default function Connect() {
                     </a>
                 </li>
             </ul>
+        */}
         </div>
     )
 }

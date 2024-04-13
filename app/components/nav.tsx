@@ -7,8 +7,8 @@ const navItems = {
   '/connect': {
     name: 'connect',
   },
-  'https://vercel.com/templates/next.js/portfolio-starter-kit': {
-    name: 'deploy',
+  'https://itsomsarraf.vercel.app': {
+    name: 'hello',
   },
 }
 
