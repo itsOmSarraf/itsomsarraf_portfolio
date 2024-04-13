@@ -3,10 +3,10 @@ import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Navbar } from './components/nav'
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
+// import { Analytics } from '@vercel/analytics/react'
+// import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
-import { baseUrl } from './sitemap'
+// import { baseUrl } from './sitemap'
 
 export const metadata: Metadata = {
   // metadataBase: new URL(baseUrl),
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'My Portfolio',
     description: 'This is my portfolio.',
-    url: baseUrl,
+    url: "https://itsomsarraf.vercel.app",
     siteName: 'My Portfolio',
     locale: 'en_US',
     type: 'website',
@@ -57,8 +57,8 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
-          <Analytics />
-          <SpeedInsights />
+          {/* <Analytics /> */}
+          {/* <SpeedInsights /> */}
         </main>
       </body>
     </html>
