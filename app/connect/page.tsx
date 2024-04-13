@@ -23,6 +23,7 @@ function ArrowIcon() {
 export default function Connect() {
     return (
         <div>
+            Google my name
             {/* <div className="flex justify">    <FaXTwitter size={40} /> Twitter</div>
             <FaLinkedin />
             <FaGithub />

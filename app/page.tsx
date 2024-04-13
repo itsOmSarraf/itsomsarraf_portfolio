@@ -3,12 +3,13 @@ import { experiences } from "./constants/experiences";
 export default function Page() {
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        My Portfolio (building 🏗️🛠️)
+      <h1 className="mb-4 text-2xl font-semibold tracking-tighter">
+        20, Verb 😎
       </h1>
-      <p className="mb-4">
-        {`Om Sarraf is an individual from India who is engaged in various activities such as freelancing, learning Next + Ts, watching anime, and reading books. He is also associated with different organizations like GDSC, NASA, and holds positions such as GDSC Lead 2023-24 and President of the IT council of DPS Dwarka.`}
+      <p className="mb-4 text-pretty">
+        {`Om Sarraf is an individual from India who is engaged in various activities such as freelancing, learning new technologies, watching anime, and reading books.`}
       </p>
+      {/* <p>Experience</p> */}
       {/* <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2"> */}
       <div className="w-full md:flex-col flex-row space-x-0">
         {Object.entries(experiences).map(([experience, { designation, month, year }]) => {
