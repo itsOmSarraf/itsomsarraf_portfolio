@@ -9,7 +9,8 @@ export default function Page() {
       <p className="mb-4">
         {`Om Sarraf is an individual from India who is engaged in various activities such as freelancing, learning Next + Ts, watching anime, and reading books. He is also associated with different organizations like GDSC, NASA, and holds positions such as GDSC Lead 2023-24 and President of the IT council of DPS Dwarka.`}
       </p>
-      <div className="w-full flex flex-col space-x-0">
+      {/* <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2"> */}
+      <div className="w-full md:flex-col flex-row space-x-0">
         {Object.entries(experiences).map(([experience, { designation, month, year }]) => {
           const yearStr0 = String(year[0])
           year[0] = yearStr0.slice(-2)
@@ -20,7 +21,7 @@ export default function Page() {
             year[1] = yearStr1.slice(-2)
           }
           return (
-            <div key={experience} className="flex flex-row justify-between w-full">
+            <div key={experience} className="flex-row md:flex justify-between w-full">
               <div className="flex flex-row items-center">
                 <p className="text-neutral-600 dark:text-neutral-400 tabular-nums">
                   {month[0]} '{year[0]} - {ongoingText}
@@ -35,6 +36,7 @@ export default function Page() {
           );
         })}
       </div>
+      {/* </div> */}
     </section>
   );
 }
