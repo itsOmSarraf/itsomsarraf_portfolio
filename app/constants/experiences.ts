@@ -1,6 +1,6 @@
 export const experiences = {
 	Intern0: {
-		designation: 'Founding Engineer @ FOF.link',
+		designation: 'Solo Founding Engineer @ FOF.link',
 		day: '1',
 		month: ['Apr', 'May'],
 		year: [2024, 'Present'],
