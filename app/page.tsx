@@ -21,14 +21,14 @@ export default function Page() {
             year[1] = yearStr1.slice(-2)
           }
           return (
-            <div key={experience} className="flex-row md:flex justify-between w-full">
-              <div className="flex flex-row items-center">
+            <div key={experience} className="flex justify-between w-full mt-5">
+              <div className="flex flex-row items-center text-nowrap text-left">
                 <p className="text-neutral-600 dark:text-neutral-400 tabular-nums">
                   {month[0]} '{year[0]} - {ongoingText}
                 </p>
               </div>
               <div className="flex flex-row items-center">
-                <p className="text-neutral-900 dark:text-neutral-100 tracking-tight">
+                <p className="text-neutral-900 dark:text-neutral-100 tracking-tight text-balance md:text-nowrap text-right">
                   {designation}
                 </p>
               </div>

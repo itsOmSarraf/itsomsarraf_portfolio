@@ -11,8 +11,8 @@ import Footer from './components/footer'
 export const metadata: Metadata = {
   // metadataBase: new URL(baseUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
+    default: 'Om Sarraf',
+    template: 'Om Sarraf portfolio',
   },
   description: 'This is my portfolio.',
   openGraph: {

@@ -16,7 +16,7 @@ export const experiences = {
 		more: ''
 	},
 	Community: {
-		designation: 'Core Team GDG Noida/New Delhi',
+		designation: 'Core @ GDG Noida / New Delhi',
 		day: '1',
 		month: ['Dec', 'Pesent'],
 		year: [2022, 'Present'],
