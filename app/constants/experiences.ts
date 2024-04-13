@@ -24,7 +24,7 @@ export const experiences = {
 		more: ''
 	},
 	School: {
-		designation: 'IT Council President',
+		designation: 'IT Council President (School)',
 		day: '1',
 		month: ['July', 'July'],
 		year: [2020, 2021],
