@@ -54,16 +54,21 @@ function Overlay({ isVisible, children }) {
 }
 
 function ExperienceDetailsPopup({ experience, setSelectedExperience }: { experience: any, setSelectedExperience: (experience: string | null) => void }) {
-  const popupRef = useRef(null);
+  // Define the type of element the ref will be attached to
+  const popupRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (popupRef.current && !popupRef.current.contains(event.target)) {
+    const handleClickOutside = (event: MouseEvent) => {
+      // Check if the clicked area is outside the popup ref
+      if (popupRef.current && !popupRef.current.contains(event.target as Node)) {
         setSelectedExperience(null);
       }
     };
 
+    // Add the event listener for detecting clicks outside the popup
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
+      // Clean up the event listener when the component unmounts
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [setSelectedExperience]);
@@ -85,7 +90,7 @@ function ExperienceDetailsPopup({ experience, setSelectedExperience }: { experie
       </div>
       <button
         onClick={() => setSelectedExperience(null)}
-        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-neutral-300 cursor-pointer px-3 py-1 rounded mb-40 hover:underline "
+        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-neutral-300 cursor-pointer bg-red-500 px-3 py-1 rounded"
         style={{ zIndex: 1000 }}
       >
         Close
@@ -93,4 +98,5 @@ function ExperienceDetailsPopup({ experience, setSelectedExperience }: { experie
     </div>
   );
 }
+
 
