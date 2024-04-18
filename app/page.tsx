@@ -54,10 +54,10 @@ function Overlay({ isVisible, children }) {
 }
 
 function ExperienceDetailsPopup({ experience, setSelectedExperience }: { experience: any, setSelectedExperience: (experience: string | null) => void }) {
-  const popupRef = useRef(null);
+  const popupRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (popupRef.current && !popupRef.current.contains(event.target)) {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (popupRef.current && !popupRef.current.contains(event.target as Node)) {
         setSelectedExperience(null);
       }
     };
