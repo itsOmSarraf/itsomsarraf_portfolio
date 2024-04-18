@@ -1,6 +1,12 @@
+"use client"
+
 import { experiences } from "./constants/experiences";
+import React, { useState, useRef, useEffect } from "react";
+
 
 export default function Page() {
+
+  const [selectedExperience, setSelectedExperience] = useState<string | null>(null);
   return (
     <section>
       <h1 className="mb-4 text-2xl font-semibold tracking-tighter">
@@ -9,27 +15,21 @@ export default function Page() {
       <p className="mb-4 text-pretty">
         {`Om Sarraf is an individual from India who is engaged in various activities such as freelancing, learning new technologies, watching anime, and reading books.`}
       </p>
-      {/* <p>Experience</p> */}
-      {/* <div className="w-full flex flex-col md:flex-row space-x-0 md:space-x-2"> */}
+      <p className="text-xl">Experience:</p>
       <div className="w-full md:flex-col flex-row space-x-0">
         {Object.entries(experiences).map(([experience, { designation, month, year }]) => {
-          const yearStr0 = String(year[0])
-          year[0] = yearStr0.slice(-2)
           const isOngoing = year[1] === 'Present' || month[1] === 'Present';
           let ongoingText = isOngoing ? 'Present' : `${month[1]} '${year[1]}`;
-          if (ongoingText !== 'Present') {
-            const yearStr1 = String(year[1])
-            year[1] = yearStr1.slice(-2)
-          }
+
           return (
-            <div key={experience} className="flex justify-between w-full mt-5">
+            <div key={experience} className="flex justify-between w-full mt-5" onClick={() => setSelectedExperience(experience)}>
               <div className="flex flex-row items-center text-nowrap text-left">
                 <p className="text-neutral-600 dark:text-neutral-400 tabular-nums">
                   {month[0]} '{year[0]} - {ongoingText}
                 </p>
               </div>
               <div className="flex flex-row items-center">
-                <p className="text-neutral-900 dark:text-neutral-100 tracking-tight text-balance md:text-nowrap text-right">
+                <p className="text-neutral-900 dark:text-neutral-100 tracking-tight text-balance md:text-nowrap text-right underline cursor-pointer">
                   {designation}
                 </p>
               </div>
@@ -37,7 +37,70 @@ export default function Page() {
           );
         })}
       </div>
-      {/* </div> */}
+      {selectedExperience && (<Overlay isVisible={true}><ExperienceDetailsPopup experience={experiences[selectedExperience]} setSelectedExperience={setSelectedExperience} />
+      </Overlay>)}
     </section>
   );
+}
+
+function Overlay({ isVisible, children }) {
+  if (!isVisible) return null;
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-40 w-full">
+      {children}
+    </div>
+  );
+}
+
+function ExperienceDetailsPopup({ experience, setSelectedExperience }: { experience: any, setSelectedExperience: (experience: string | null) => void }) {
+  const popupRef = useRef(null);
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [setSelectedExperience]);
+
+  function handleClickOutside() {
+    setSelectedExperience(null);
+  }
+  return (
+    <div
+      ref={popupRef}
+      className="fixed inset-0 flex items-center justify-center z-50 p-4 backdrop-blur-sm bg-black/30"
+    >
+      <div className="bg-white rounded-lg shadow-lg max-w-[80%] mx-auto relative">
+        <button
+          onClick={() => setSelectedExperience(null)}
+          className="absolute top-2 right-2 text-neutral-500 hover:text-neutral-700 transition-colors"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+        <div className="p-6">
+          <h2 className="text-xl font-semibold mb-2 text-black">{experience.designation}</h2>
+          <p className="text-sm text-neutral-600 mb-1">
+            <span className="font-semibold">Location</span>📍: {experience.location}
+          </p>
+          <p className="text-sm text-neutral-600 mb-1">
+            <span className="font-semibold">Timeline:</span> 20{experience.year[0]} - {experience.year[1] === 'Present' ? 'Present' : `20${experience.year[1]}`}
+          </p>
+          <p className="text-sm text-neutral-600">{experience.more}</p>
+        </div>
+      </div>
+    </div>
+  )
 }

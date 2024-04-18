@@ -1,5 +1,5 @@
 export default function Projects() {
     return (
-        <div>Coming Soon</div>
+        <div>Building Cool Stuff, WIP 🏗️</div>
     )
 }
