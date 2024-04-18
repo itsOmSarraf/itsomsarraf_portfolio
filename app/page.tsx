@@ -56,51 +56,41 @@ function Overlay({ isVisible, children }) {
 function ExperienceDetailsPopup({ experience, setSelectedExperience }: { experience: any, setSelectedExperience: (experience: string | null) => void }) {
   const popupRef = useRef(null);
   useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (popupRef.current && !popupRef.current.contains(event.target)) {
+        setSelectedExperience(null);
+      }
+    };
+
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [setSelectedExperience]);
 
-  function handleClickOutside() {
-    setSelectedExperience(null);
-  }
   return (
     <div
       ref={popupRef}
       className="fixed inset-0 flex items-center justify-center z-50 p-4 backdrop-blur-sm bg-black/30"
     >
-      <div className="bg-white rounded-lg shadow-lg max-w-[80%] mx-auto relative">
-        <button
-          onClick={() => setSelectedExperience(null)}
-          className="absolute top-2 right-2 text-neutral-500 hover:text-neutral-700 transition-colors"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
-        <div className="p-6">
-          <h2 className="text-xl font-semibold mb-2 text-black">{experience.designation}</h2>
-          <p className="text-sm text-neutral-600 mb-1">
-            <span className="font-semibold">Location</span>📍: {experience.location}
-          </p>
-          <p className="text-sm text-neutral-600 mb-1">
-            <span className="font-semibold">Timeline:</span> 20{experience.year[0]} - {experience.year[1] === 'Present' ? 'Present' : `20${experience.year[1]}`}
-          </p>
-          <p className="text-sm text-neutral-600">{experience.more}</p>
-        </div>
+      <div className="bg-white rounded-lg shadow-lg max-w-[80%] mx-auto relative p-6">
+        <h2 className="text-xl font-semibold mb-2 text-black">{experience.designation}</h2>
+        <p className="text-sm text-neutral-600 mb-1">
+          <span className="font-semibold">Location</span>📍: {experience.location}
+        </p>
+        <p className="text-sm text-neutral-600 mb-1">
+          <span className="font-semibold">Timeline:</span> 20{experience.year[0]} - {experience.year[1] === 'Present' ? 'Present' : `20${experience.year[1]}`}
+        </p>
+        <p className="text-sm text-neutral-600">{experience.more}</p>
       </div>
+      <button
+        onClick={() => setSelectedExperience(null)}
+        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-neutral-300 cursor-pointer px-3 py-1 rounded mb-40 hover:underline "
+        style={{ zIndex: 1000 }}
+      >
+        Close
+      </button>
     </div>
-  )
+  );
 }
+
