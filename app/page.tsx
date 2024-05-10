@@ -73,15 +73,17 @@ function ExperienceDetailsPopup({ experience, setSelectedExperience }: { experie
       ref={popupRef}
       className="fixed inset-0 flex items-center justify-center z-50 p-4 backdrop-blur-sm bg-black/30"
     >
-      <div className="bg-white rounded-lg shadow-lg max-w-[80%] mx-auto relative p-6">
+      <div className="bg-white rounded-lg shadow-lg mx-auto relative p-6 max-w-96">
         <h2 className="text-xl font-semibold mb-2 text-black">{experience.designation}</h2>
-        <p className="text-sm text-neutral-600 mb-1">
-          <span className="font-semibold">Location</span>📍: {experience.location}
-        </p>
-        <p className="text-sm text-neutral-600 mb-1">
-          <span className="font-semibold">Timeline:</span> 20{experience.year[0]} - {experience.year[1] === 'Present' ? 'Present' : `20${experience.year[1]}`}
-        </p>
-        <p className="text-sm text-neutral-600">{experience.more}</p>
+        <div className="flex justify-around mb-2 text-wrap">
+          <p className="text-sm text-neutral-600 mb-1">
+            <span className="font-semibold"></span>📍: {experience.location}
+          </p>
+          <p className="text-sm text-neutral-600 mb-1">
+            <span className="font-semibold">Timeline : </span>{experience.month[0]}'{experience.year[0]} - {experience.year[1] === 'Present' ? 'Present' : `20${experience.year[1]}`}
+          </p>
+        </div>
+        <p className="text-md text-neutral-800 text-wrap font-sans">{experience.more}</p>
       </div>
       <button
         onClick={() => setSelectedExperience(null)}
