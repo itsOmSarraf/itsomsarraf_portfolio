@@ -1,6 +1,14 @@
 export const experiences = {
+	Intern1: {
+		designation: 'FullStack intern @vexio.in',
+		day: '1',
+		month: ['May', 'Present'],
+		year: [24, 'Present'],
+		location: 'Remote',
+		more: 'Working with a small team of 6 people on the GenAi MVP, stack : Nextjs and Django'
+	},
 	Intern0: {
-		designation: 'Solo Founding Engineer → FOF.link',
+		designation: 'Solo Founding Dev @FOF.link',
 		day: '1',
 		month: ['Apr', 'May'],
 		year: [24, 'Present'],

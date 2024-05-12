@@ -74,8 +74,8 @@ function ExperienceDetailsPopup({ experience, setSelectedExperience }: { experie
       className="fixed inset-0 flex items-center justify-center z-50 p-4 backdrop-blur-sm bg-black/30"
     >
       <div className="bg-white rounded-lg shadow-lg mx-auto relative p-6 max-w-96">
-        <h2 className="text-xl font-semibold mb-2 text-black">{experience.designation}</h2>
-        <div className="flex justify-around mb-2 text-wrap">
+        <h2 className="text-2xl font-bold mb-2 text-black">{experience.designation}</h2>
+        <div className="flex gap-10 mb-2 text-wrap">
           <p className="text-sm text-neutral-600 mb-1">
             <span className="font-semibold"></span>📍: {experience.location}
           </p>
