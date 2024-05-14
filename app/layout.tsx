@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   // metadataBase: new URL(baseUrl),
   title: {
     default: 'Om Sarraf',
-    template: 'Om Sarraf portfolio',
+    template: 'Om Sarraf itsomsarraf',
   },
   description: 'itsomsarraf',
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
+    title: 'Om Sarraf',
+    description: 'itsomsarraf',
     url: "https://itsomsarraf.vercel.app",
     siteName: 'My Portfolio',
     locale: 'en_US',
