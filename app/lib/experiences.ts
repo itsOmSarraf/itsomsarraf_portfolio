@@ -14,9 +14,9 @@ export const experiences = [
 		title: 'Solo Founding Dev',
 		company: 'FOF.link',
 		location: 'Remote',
-		duration: 'April 2024 - May 2024',
+		duration: 'April 2024 - Present',
 		Sdate: 'April, 2024',
-		Edate: 'May 2024',
+		Edate: 'Present',
 		description:
 			'Working as a solo Engineer at FOF.link, learnt Nextjs on day 0 of joining, building the platform solely :D',
 		url: 'https://www.fof.link'
