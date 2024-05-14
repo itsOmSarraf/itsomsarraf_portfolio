@@ -6,7 +6,7 @@ export default function Component({ title, company, location, duration, Sdate, E
             <div className="space-y-1.5 p-6 flex flex-col gap-2">
                 <div className="flex items-center justify-between">
                     <h3 className="whitespace-nowrap text-2xl font-semibold leading-none text-wrap text-gray-900 dark:text-gray-50">{title}</h3>
-                    <div className="text-center rounded-md bg-gray-100 px-2 py-1 text-sm font-medium text-gray-900 dark:bg-gray-800 dark:text-gray-50">
+                    <div className="text-center rounded-md bg-gray-300 px-2 py-1 text-sm font-medium text-gray-900 dark:bg-gray-800  dark:text-gray-50">
                         {location}
                     </div>
                 </div>
@@ -40,7 +40,7 @@ export default function Component({ title, company, location, duration, Sdate, E
                         </svg>
                         <div>
                             <p className="text-sm font-medium text-gray-900 dark:text-gray-50">Duration</p>
-                            <p className="text-gray-500 dark:text-gray-400">{duration}</p>
+                            <p className="dark:text-gray-400">{duration}</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-2">
@@ -61,7 +61,7 @@ export default function Component({ title, company, location, duration, Sdate, E
                         </svg>
                         <div>
                             <p className="text-sm font-medium text-gray-900 dark:text-gray-50">Start Date</p>
-                            <p className="text-gray-500 dark:text-gray-400">{Sdate}</p>
+                            <p className="dark:text-gray-400">{Sdate}</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-2">
@@ -85,13 +85,13 @@ export default function Component({ title, company, location, duration, Sdate, E
                         </svg>
                         <div>
                             <p className="text-sm font-medium text-gray-900 dark:text-gray-50">End Date</p>
-                            <p className="text-gray-500 dark:text-gray-400">{Edate}</p>
+                            <p className="dark:text-gray-400">{Edate}</p>
                         </div>
                     </div>
                 </div>
                 <div className="mt-6 space-y-2">
                     <p className="text-sm font-medium text-gray-900 dark:text-gray-50">Description</p>
-                    <p className="text-gray-500 dark:text-gray-400">
+                    <p className="dark:text-gray-400">
                         {description}
                     </p>
                 </div>

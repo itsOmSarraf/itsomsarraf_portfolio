@@ -63,7 +63,7 @@ export default function Page() {
 function Overlay({ isVisible, children }) {
   if (!isVisible) return null;
 
-  return <div className="fixed inset-0 dark:bg-black bg-opacity-50 z-40 w-full">{children}</div>;
+  return <div className="fixed bg-white dark:bg-black z-40 w-full">{children}</div>;
 }
 
 function ExperienceDetailsPopup({ experience, setSelectedExperience }) {
@@ -85,7 +85,8 @@ function ExperienceDetailsPopup({ experience, setSelectedExperience }) {
   return (
     <div
       ref={popupRef}
-      className="fixed inset-0 flex items-center justify-center z-50 p-4 backdrop-blur-sm bg-black/30"
+      // className="fixed inset-0 flex items-center justify-center z-50 p-4 backdrop-blur-sm bg-black/30"
+      className="fixed inset-0 flex items-center justify-center z-50 p-4 backdrop-blur-3xl "
     >
       <Component
         duration={experience.duration}
