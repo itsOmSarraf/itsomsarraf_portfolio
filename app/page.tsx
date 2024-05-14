@@ -63,7 +63,7 @@ export default function Page() {
 function Overlay({ isVisible, children }) {
   if (!isVisible) return null;
 
-  return <div className="fixed inset-0 bg-black bg-opacity-50 z-40 w-full">{children}</div>;
+  return <div className="fixed inset-0 dark:bg-black bg-opacity-50 z-40 w-full">{children}</div>;
 }
 
 function ExperienceDetailsPopup({ experience, setSelectedExperience }) {

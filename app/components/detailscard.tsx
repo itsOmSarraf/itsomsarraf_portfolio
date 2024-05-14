@@ -5,12 +5,12 @@ export default function Component({ title, company, location, duration, Sdate, E
         <div className="rounded-lg border bg-card text-card-foreground shadow-sm w-full max-w-md" data-v0-t="card">
             <div className="space-y-1.5 p-6 flex flex-col gap-2">
                 <div className="flex items-center justify-between">
-                    <h3 className="whitespace-nowrap text-2xl font-semibold leading-none text-wrap">{title}</h3>
+                    <h3 className="whitespace-nowrap text-2xl font-semibold leading-none text-wrap text-gray-900 dark:text-gray-50">{title}</h3>
                     <div className="text-center rounded-md bg-gray-100 px-2 py-1 text-sm font-medium text-gray-900 dark:bg-gray-800 dark:text-gray-50">
                         {location}
                     </div>
                 </div>
-                <p className="text-sm text-muted-foreground"><a className="underline cursor-pointer" href={url} target="_blank">{company}</a></p>
+                <p className="text-sm text-muted-foreground text-gray-900 dark:text-gray-50"><a className="underline cursor-pointer" href={url} target="_blank">{company}</a></p>
             </div>
             <div className="p-6 pt-0">
                 <div className="grid gap-4">
@@ -39,7 +39,7 @@ export default function Component({ title, company, location, duration, Sdate, E
                             <path d="M16 18h.01"></path>
                         </svg>
                         <div>
-                            <p className="text-sm font-medium">Duration</p>
+                            <p className="text-sm font-medium text-gray-900 dark:text-gray-50">Duration</p>
                             <p className="text-gray-500 dark:text-gray-400">{duration}</p>
                         </div>
                     </div>
@@ -60,7 +60,7 @@ export default function Component({ title, company, location, duration, Sdate, E
                             <polyline points="12 6 12 12 16 14"></polyline>
                         </svg>
                         <div>
-                            <p className="text-sm font-medium">Start Date</p>
+                            <p className="text-sm font-medium text-gray-900 dark:text-gray-50">Start Date</p>
                             <p className="text-gray-500 dark:text-gray-400">{Sdate}</p>
                         </div>
                     </div>
@@ -84,13 +84,13 @@ export default function Component({ title, company, location, duration, Sdate, E
                             <path d="m9 16 2 2 4-4"></path>
                         </svg>
                         <div>
-                            <p className="text-sm font-medium">End Date</p>
+                            <p className="text-sm font-medium text-gray-900 dark:text-gray-50">End Date</p>
                             <p className="text-gray-500 dark:text-gray-400">{Edate}</p>
                         </div>
                     </div>
                 </div>
                 <div className="mt-6 space-y-2">
-                    <p className="text-sm font-medium">Description</p>
+                    <p className="text-sm font-medium text-gray-900 dark:text-gray-50">Description</p>
                     <p className="text-gray-500 dark:text-gray-400">
                         {description}
                     </p>

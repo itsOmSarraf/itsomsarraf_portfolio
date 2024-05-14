@@ -5,7 +5,7 @@ import { GeistMono } from 'geist/font/mono'
 import { Navbar } from './components/nav'
 // import { Analytics } from '@vercel/analytics/react'
 // import { SpeedInsights } from '@vercel/speed-insights/next'
-import Footer from './components/footer'
+// import Footer from './components/footer'
 // import { baseUrl } from './sitemap'
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     default: 'Om Sarraf',
     template: 'Om Sarraf portfolio',
   },
-  description: 'This is my portfolio.',
+  description: 'itsomsarraf',
   openGraph: {
     title: 'My Portfolio',
     description: 'This is my portfolio.',
