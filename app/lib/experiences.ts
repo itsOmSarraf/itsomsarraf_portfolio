@@ -4,7 +4,7 @@ export const experiences = [
 		company: 'vexio.in',
 		location: 'Remote',
 		duration: 'May 2024 - Present',
-		Sdate: 'May 1, 2024',
+		Sdate: 'May 13, 2024',
 		Edate: 'Present',
 		description:
 			'Working with a small team of 6 people on the GenAi MVP, stack: Nextjs and Django',
@@ -30,7 +30,7 @@ export const experiences = [
 		Edate: 'July 2024',
 		description:
 			'Led the Google Developer Student Club at college, organizing coding events and workshops.',
-		url: 'https://www.bennett.edu.in'
+		url: 'https://gdsc.community.dev/bennett-university-greater-noida-india/'
 	},
 	{
 		title: 'Google Developer Groups',
@@ -40,7 +40,7 @@ export const experiences = [
 		Sdate: 'Dece, 2022',
 		Edate: 'Present',
 		description:
-			"Part of the core team for the Google Developer Group in Noida and New Delhi, helping organize DevFest '22, '23",
+			'Part of the core team for the Google Developer Groups in Noida and New Delhi, helping organize DevFest 2022, 2023',
 		url: 'https://developers.google.com/community/gdg'
 	},
 	{
