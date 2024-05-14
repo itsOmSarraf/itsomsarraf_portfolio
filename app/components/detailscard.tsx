@@ -5,8 +5,8 @@ export default function Component({ title, company, location, duration, Sdate, E
         <div className="rounded-lg border bg-card text-card-foreground shadow-sm w-full max-w-md" data-v0-t="card">
             <div className="space-y-1.5 p-6 flex flex-col gap-2">
                 <div className="flex items-center justify-between">
-                    <h3 className="whitespace-nowrap text-2xl font-semibold leading-none tracking-tight">{title}</h3>
-                    <div className="rounded-md bg-gray-100 px-2 py-1 text-sm font-medium text-gray-900 dark:bg-gray-800 dark:text-gray-50">
+                    <h3 className="whitespace-nowrap text-2xl font-semibold leading-none text-wrap">{title}</h3>
+                    <div className="text-center rounded-md bg-gray-100 px-2 py-1 text-sm font-medium text-gray-900 dark:bg-gray-800 dark:text-gray-50">
                         {location}
                     </div>
                 </div>

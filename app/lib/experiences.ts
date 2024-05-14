@@ -36,8 +36,8 @@ export const experiences = [
 		title: 'Google Developer Groups',
 		company: 'Google Developer Group',
 		location: 'Delhi NCR',
-		duration: 'December 2022 - Present',
-		Sdate: 'December, 2022',
+		duration: 'Dec 2022 - Present',
+		Sdate: 'Dece, 2022',
 		Edate: 'Present',
 		description:
 			"Part of the core team for the Google Developer Group in Noida and New Delhi, helping organize DevFest '22, '23",

@@ -41,7 +41,7 @@ export default function Page() {
               </p>
             </div>
             <div className="flex flex-row items-center">
-              <p className="text-neutral-900 dark:text-neutral-100 tracking-tight text-balance md:text-nowrap text-right underline">
+              <p className="text-neutral-900 dark:text-neutral-100 text-wrap md:text-nowrap text-right underline">
                 {experience.title}
               </p>
             </div>
