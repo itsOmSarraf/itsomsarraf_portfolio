@@ -100,7 +100,7 @@ function ExperienceDetailsPopup({ experience, setSelectedExperience }) {
       />
       <button
         onClick={() => setSelectedExperience(null)}
-        className="absolute top-4 right-4 text-neutral-300 cursor-pointer px-3 py-3 rounded hover:underline"
+        className="absolute top-4 right-4 text-neutral-500 cursor-pointer px-3 py-3 rounded hover:underline"
         style={{ zIndex: 1000 }}
       >
         X
