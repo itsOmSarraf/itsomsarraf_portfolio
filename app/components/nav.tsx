@@ -7,12 +7,12 @@ const navItems = {
   '/connect': {
     name: 'connect',
   },
-  '/projects': {
-    name: 'projects',
-  },
-  // 'resume': {
-  //   name: 'resume'
-  // }
+  // '/projects': {
+  //   name: 'projects',
+  // },
+  'resume': {
+    name: 'resume'
+  }
 }
 
 export function Navbar() {
