@@ -65,7 +65,6 @@ function Overlay({ isVisible, children }) {
 
   return <div className="fixed bg-white dark:bg-black z-40 w-full">{children}</div>;
 }
-
 function ExperienceDetailsPopup({ experience, setSelectedExperience }) {
   const popupRef: RefObject<HTMLDivElement> = useRef(null);
 
@@ -83,28 +82,19 @@ function ExperienceDetailsPopup({ experience, setSelectedExperience }) {
   }, [setSelectedExperience]);
 
   return (
-    <div
-      ref={popupRef}
-      // className="fixed inset-0 flex items-center justify-center z-50 p-4 backdrop-blur-sm bg-black/30"
-      className="fixed inset-0 flex items-center justify-center z-50 p-4 backdrop-blur-3xl "
-    >
-      <Component
-        duration={experience.duration}
-        title={experience.title}
-        location={experience.location}
-        Sdate={experience.Sdate}
-        Edate={experience.Edate}
-        company={experience.company}
-        description={experience.description}
-        url={experience.url}
-      />
-      <button
-        onClick={() => setSelectedExperience(null)}
-        className="absolute top-4 right-4 text-neutral-500 cursor-pointer px-3 py-3 rounded hover:underline"
-        style={{ zIndex: 1000 }}
-      >
-        X
-      </button>
+    <div className="fixed inset-0 flex items-center justify-center z-50 p-4 bg-black bg-opacity-50">
+      <div ref={popupRef}>
+        <Component
+          duration={experience.duration}
+          title={experience.title}
+          location={experience.location}
+          Sdate={experience.Sdate}
+          Edate={experience.Edate}
+          company={experience.company}
+          description={experience.description}
+          url={experience.url}
+        />
+      </div>
     </div>
   );
 }

@@ -14,7 +14,7 @@ export const experiences = [
 		title: 'Solo Founding Dev',
 		company: 'FOF.link',
 		location: 'Remote',
-		duration: 'April 2024 - Present',
+		duration: 'April 2024 - June 2024',
 		Sdate: 'April, 2024',
 		Edate: 'Present',
 		description:
