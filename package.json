@@ -1,29 +1,28 @@
 {
+  "name": "itsomsarraf_portfolio",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev  -H 0.0.0.0",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@tailwindcss/postcss": "4.0.0-alpha.13",
-    "@types/node": "20.11.17",
-    "@types/react": "18.2.55",
-    "@types/react-dom": "18.2.19",
-    "@vercel/analytics": "^1.2.2",
-    "@vercel/speed-insights": "^1.0.9",
-    "geist": "1.2.2",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "next": "^14.0.0",
-    "next-mdx-remote": "^4.4.1",
-    "react-icons": "^5.0.1",
-    "sugar-high": "^0.6.0",
-    "typescript": "5.3.3"
+    "lucide-react": "^0.441.0",
+    "next": "14.2.11",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-rough-notation": "^1.0.5"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.35",
-    "tailwindcss": "4.0.0-alpha.13"
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.11"
   }
 }
