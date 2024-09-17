@@ -10,7 +10,8 @@ export const experiences = [
 			'Working with a small team of 6 people on the GenAi MVP',
 			'Stack: Nextjs and Django'
 		],
-		url: 'https://vexio.in'
+		url: 'https://vexio.in',
+		stack: ['Next.js', 'Framer Motion', 'Zustand']
 	},
 	{
 		title: 'Solo Founding Dev',
@@ -20,11 +21,12 @@ export const experiences = [
 		Sdate: 'April, 2024',
 		Edate: 'Present',
 		description: [
-			'Working as a solo Engineer at FOF.link',
+			'Worked as a solo Engineer at FOF.link',
 			'Learnt Nextjs on day 0 of joining',
 			'Building the platform solely :D'
 		],
-		url: 'https://fof.link'
+		url: 'https://fof.link',
+		stack: ['Next.js', 'Neo4j', 'Clerk']
 	},
 	{
 		title: 'GDSC Lead',
@@ -37,7 +39,8 @@ export const experiences = [
 			'Led the Google Developer Student Club at college',
 			'Organized coding events and workshops'
 		],
-		url: 'https://gdsc.community.dev/bennett-university-greater-noida-india/'
+		url: 'https://gdsc.community.dev/bennett-university-greater-noida-india/',
+		stack: ['Event Management', 'Leadership', 'Google Technologies']
 	},
 	{
 		title: 'Google Developer Groups',
@@ -50,7 +53,8 @@ export const experiences = [
 			'Part of the core team for the Google Developer Groups in Noida and New Delhi',
 			'Helped organize DevFest 2022, 2023'
 		],
-		url: 'https://developers.google.com/community/gdg'
+		url: 'https://developers.google.com/community/gdg',
+		stack: ['Community Building', 'Event Organization', 'Google Technologies']
 	},
 	{
 		title: 'President, IT Council',
@@ -63,6 +67,7 @@ export const experiences = [
 			'Served as the President of the IT Council in school',
 			'Led technology initiatives and events'
 		],
-		url: 'https://dpsdwarka.com'
+		url: 'https://dpsdwarka.com',
+		stack: ['Leadership', 'Event Planning', 'Technology Management']
 	}
 ];

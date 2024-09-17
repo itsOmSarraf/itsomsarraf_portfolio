@@ -9,7 +9,8 @@ const ExperienceItem = ({
 	location,
 	duration,
 	description,
-	url
+	url,
+	stack
 }) => (
 	<div className='mb-8 bg-white rounded-lg shadow-md p-6'>
 		<h3 className='text-xl font-semibold text-gray-800'>{title}</h3>
@@ -24,7 +25,7 @@ const ExperienceItem = ({
 			{location && ` - ${location}`}
 		</h4>
 		<p className='text-sm text-gray-600 mb-4'>{duration}</p>
-		<ul className='list-none pl-0'>
+		<ul className='list-none pl-0 mb-4'>
 			{description.map((item, index) => (
 				<li
 					key={index}
@@ -34,6 +35,22 @@ const ExperienceItem = ({
 				</li>
 			))}
 		</ul>
+		{stack && stack.length > 0 && (
+			<div>
+				<h5 className='text-sm font-semibold text-gray-700 mb-2'>
+					Tech Stack:
+				</h5>
+				<div className='flex flex-wrap'>
+					{stack.map((tech, index) => (
+						<span
+							key={index}
+							className='bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded mr-2 mb-2'>
+							{tech}
+						</span>
+					))}
+				</div>
+			</div>
+		)}
 	</div>
 );
 
@@ -48,7 +65,14 @@ const Experiences = () => {
 				<h2 className='text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-gray-800'>
 					Work Experience
 				</h2>
-				<div className='flex flex-col md:flex-row'>
+				<div className='flex flex-col md:flex-row-reverse'>
+					<div className='w-full md:w-3/4 md:pl-8'>
+						{experiences.find((exp) => exp.company === selectedCompany) && (
+							<ExperienceItem
+								{...experiences.find((exp) => exp.company === selectedCompany)}
+							/>
+						)}
+					</div>
 					<div className='w-full md:w-1/4 mb-4 md:mb-0'>
 						<ul className='list-none pl-0 md:border-l md:border-gray-300'>
 							{experiences.map((exp) => (
@@ -64,13 +88,6 @@ const Experiences = () => {
 								</li>
 							))}
 						</ul>
-					</div>
-					<div className='w-full md:w-3/4 md:pl-8'>
-						{experiences.find((exp) => exp.company === selectedCompany) && (
-							<ExperienceItem
-								{...experiences.find((exp) => exp.company === selectedCompany)}
-							/>
-						)}
 					</div>
 				</div>
 			</div>
