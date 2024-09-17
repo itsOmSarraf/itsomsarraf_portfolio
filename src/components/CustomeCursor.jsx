@@ -43,7 +43,9 @@ const CustomCursor = () => {
 	return (
 		<div
 			ref={circleRef}
-			className={`custom-cursor ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+			className={`custom-cursor hidden md:block ${
+				isVisible ? 'opacity-100' : 'opacity-0'
+			}`}
 		/>
 	);
 };
