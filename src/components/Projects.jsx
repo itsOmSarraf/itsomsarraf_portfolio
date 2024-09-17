@@ -3,12 +3,13 @@ import Image from 'next/image';
 import { BsGithub } from 'react-icons/bs';
 import { FiExternalLink } from 'react-icons/fi';
 import { dummyProjects } from '@/lib/projects';
+
 const ProjectCard = ({ project, index }) => (
 	<div
 		className={`relative flex flex-col md:flex-row items-center mb-16 md:mb-24 ${
 			index % 2 !== 0 ? 'md:flex-row-reverse' : ''
 		}`}>
-		<div className='w-full md:w-3/5 lg:w-2/3 relative mb-6 md:mb-0'>
+		<div className='w-full md:w-3/5 lg:w-2/3 relative mb-6 md:mb-0 group'>
 			<Image
 				src={project.imagePath}
 				width={800}
@@ -16,16 +17,16 @@ const ProjectCard = ({ project, index }) => (
 				alt={`${project.name} preview`}
 				className='w-full h-auto object-cover rounded-xl shadow-md'
 			/>
-			<div className='absolute inset-0 bg-black opacity-30 md:opacity-0 rounded-xl'></div>
+			<div className='hidden md:block absolute inset-0 bg-white opacity-50 group-hover:opacity-0 transition-opacity duration-300 rounded-xl'></div>
 		</div>
 		<div
 			className={`w-full md:w-1/2 lg:w-2/5 bg-white p-6 rounded-xl shadow-lg border border-gray-200 
-                    md:absolute md:top-10 ${
-											index % 2 === 0 ? 'md:right-0' : 'md:left-0'
-										} 
-                    flex flex-col justify-center ${
-											index % 2 === 0 ? 'md:text-right' : 'md:text-left'
-										}`}>
+                md:absolute md:top-10 ${
+									index % 2 === 0 ? 'md:right-0' : 'md:left-0'
+								} 
+                flex flex-col justify-center ${
+									index % 2 === 0 ? 'md:text-right' : 'md:text-left'
+								}`}>
 			<h3 className='mb-3 text-xl font-semibold text-gray-800'>
 				{project.name}
 			</h3>
@@ -87,9 +88,6 @@ const Projects = ({ projects }) => {
 	);
 };
 
-// Dummy data array
-
-// Example usage
 const ProjectsPage = () => <Projects projects={dummyProjects} />;
 
 export default ProjectsPage;
