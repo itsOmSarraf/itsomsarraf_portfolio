@@ -26,7 +26,8 @@
 		"**/*.ts",
 		"**/*.tsx",
 		".next/types/**/*.ts",
-		"src/components/CustomeCursor.jsx"
+		"src/components/CustomeCursor.jsx",
+		"src/components/Experience.jsx"
 	],
 	"exclude": ["node_modules"]
 }
