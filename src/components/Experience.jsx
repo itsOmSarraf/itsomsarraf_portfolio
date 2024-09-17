@@ -1,6 +1,5 @@
 'use client';
 import React, { useState } from 'react';
-
 import { experiences } from '@/lib/expriences';
 
 const ExperienceItem = ({
@@ -78,13 +77,18 @@ const Experiences = () => {
 							{experiences.map((exp) => (
 								<li
 									key={exp.company}
-									className={`mb-2 pl-4 py-2 cursor-pointer transition-colors duration-200 ${
+									className={`mb-4 pl-4 py-2 cursor-pointer transition-colors duration-200 ${
 										selectedCompany === exp.company
 											? 'text-gray-800 font-semibold border-l-2 border-gray-800 bg-gray-200 md:bg-transparent'
 											: 'text-gray-600 hover:text-gray-800 hover:bg-gray-100'
 									}`}
 									onClick={() => setSelectedCompany(exp.company)}>
-									{exp.company}
+									<div className='flex flex-col'>
+										<span className='font-medium'>{exp.company}</span>
+										<span className='text-xs text-gray-500'>
+											{exp.duration}
+										</span>
+									</div>
 								</li>
 							))}
 						</ul>
