@@ -1,6 +1,5 @@
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import Image from "next/image";
-import { MdArrowOutward } from "react-icons/md";
 import OmSarraf from "@/public/Om_Sarraf.png"
 import Socials from "../app/Socials";
 import { GoArrowDownLeft } from "react-icons/go";
