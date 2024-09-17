@@ -3,7 +3,7 @@ import Image from "next/image";
 import { MdArrowOutward } from "react-icons/md";
 import OmSarraf from "@/public/Om_Sarraf.png"
 import Socials from "../app/Socials";
-
+import { GoArrowDownLeft } from "react-icons/go";
 export default function Hero() {
     return (
         <div className="w-full items-center">
@@ -18,8 +18,8 @@ export default function Hero() {
                                 <RoughNotation type="circle" color="#B8001F">FullStack intern</RoughNotation>, & also does some{' '}
                                 <RoughNotation type="highlight" color="#FFEB00">
                                     <span className="inline-flex items-center hide-cursor">
-                                        <a href="/freelancing" target="_blank" rel="noopener noreferrer" className="underline">freelancing (open to gigs)</a>
-                                        <MdArrowOutward className="ml-1" />
+                                        <a href="mailto:itsomsarraf@gmail.com" target="_blank" rel="noopener noreferrer" className="underline">freelancing (open to gigs)</a>
+                                        <GoArrowDownLeft className="ml-1" />
                                     </span>
                                 </RoughNotation>
                             </p>
