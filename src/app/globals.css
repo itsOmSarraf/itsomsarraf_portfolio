@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.custom-cursor {
+	@apply w-10 h-10 bg-gradient-to-tl from-blue-600 to-blue-400 rounded-full fixed top-1/2 left-1/2 -mt-5 -ml-5 pointer-events-none mix-blend-multiply z-50;
+}
