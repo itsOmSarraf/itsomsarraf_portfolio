@@ -84,7 +84,8 @@ const Experiences = () => {
 									}`}
 									onClick={() => setSelectedCompany(exp.company)}>
 									<div className='flex flex-col'>
-										<span className='font-medium'>{exp.company}</span>
+										{/* <span className='font-medium'>{exp.company}</span> */}
+										<span className='text-sm text-gray-700'>{exp.title}</span>
 										<span className='text-xs text-gray-500'>
 											{exp.duration}
 										</span>
