@@ -2,12 +2,12 @@ export const dummyProjects = [
 	{
 		name: 'Dishcovery',
 		imagePath:
-			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/dishcovery-image.png',
+			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/dishcovery-nextjs.png',
 		techStack: 'Nextjs, Gemini, Zustand',
 		githubLink: 'https://github.com/itsomsarraf/dishcovery-nextjs',
 		deployedLink: 'https://dishcovery-nextjs.vercel.app',
 		description:
-			'AI-powered recipe recommender that transforms fridge contents into culinary inspiration. Snap a photo of your vegetables, input preferences, and get personalized meal suggestions instantly'
+			'Snap a photo of your vegetables, input preferences, and get personalized meal suggestions instantly.'
 		// dateCreated: 'Oco 2024'
 	}
 	// {
