@@ -42,9 +42,9 @@ const ProjectCard = ({ project, index }) => (
 					</span>
 				))}
 			</div>
-			<p className='text-sm text-gray-600 mb-4 text-center md:text-left'>
+			{/* <p className='text-sm text-gray-600 mb-4 text-center md:text-left'>
 				{project.dateCreated}
-			</p>
+			</p> */}
 			<div className='flex justify-center md:justify-start gap-3'>
 				{project.githubLink && (
 					<a
