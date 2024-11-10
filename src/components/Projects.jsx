@@ -9,7 +9,7 @@ const TechStack = ({ techStack }) => (
 		{techStack.split(',').map((tech, i) => (
 			<span
 				key={i}
-				className='px-2 py-1 bg-gray-200 text-gray-700 rounded text-xs'>
+				className='px-2 py-1 bg-gray-200 font-semibold text-black rounded text-xs'>
 				{tech.trim()}
 			</span>
 		))}
