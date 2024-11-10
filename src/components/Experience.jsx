@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { experiences } from '@/lib/expriences';
+import { RiArrowDropRightFill } from 'react-icons/ri';
 
 const ExperienceItem = ({
 	title,
@@ -28,11 +29,9 @@ const ExperienceItem = ({
 			{description.map((item, index) => (
 				<li
 					key={index}
-					className='flex items-start group'>
-					<span className='text-blue-500 mr-2 transform group-hover:translate-x-1 transition-transform duration-200'>
-						▹
-					</span>
-					<span className='text-gray-600 group-hover:text-gray-800 transition-colors duration-200'>
+					className='flex'>
+					<RiArrowDropRightFill className='text-blue-500 fill-blue-500 text-3xl flex-shrink-0' />
+					<span className='flex items-center text-gray-600 group-hover:text-gray-800 transition-colors duration-200'>
 						{item}
 					</span>
 				</li>
