@@ -49,7 +49,7 @@ const CustomCursor = () => {
 	return (
 		<div
 			ref={cursorRef}
-			className='custom-cursor fixed pointer-events-none z-50 hidden md:visible'
+			className='custom-cursor fixed pointer-events-none z-50 md:visible'
 			style={{ top: '-1px', left: '-1px' }}>
 			{isPointer ? (
 				<LuPointer
