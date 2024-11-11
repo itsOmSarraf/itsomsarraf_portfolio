@@ -7,7 +7,7 @@ export const experiences = [
 		Sdate: '2024-05-13',
 		Edate: 'Present',
 		description: [
-			'Contributing to GenAI MVP development with a small engineering team',
+			'Contributed to GenAI MVP development with a small engineering team',
 			'Built full-stack features using Next.js frontend and Django backend',
 			'Implemented state management with Zustand and animations using Framer Motion'
 		],
