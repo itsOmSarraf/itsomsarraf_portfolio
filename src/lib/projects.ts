@@ -38,6 +38,6 @@ export const dummyProjects = [
 		githubLink: 'https://github.com/itsomsarraf/COVID_RETWEET',
 		deployedLink: 'https://x.com/covid_retweet',
 		description:
-			'Emergency response Twitter bot that amplified over 800+ verified COVID-19 resource tweets during the pandemic crisis. Auto-retweeted verified information about beds, oxygen, plasma, and medical supplies. Successfully served its purpose and was retired as resource demands decreased.'
+			'Emergency response Twitter bot that amplified over 800+ verified COVID-19 healthcare essentials tweets during the pandemic crisis. Successfully served its purpose and was retired as resource demands decreased.'
 	}
 ];
