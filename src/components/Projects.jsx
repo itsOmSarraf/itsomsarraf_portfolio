@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { BsGithub } from 'react-icons/bs';
 import { FiExternalLink } from 'react-icons/fi';
@@ -20,7 +22,7 @@ const ProjectLinks = ({ githubLink, deployedLink }) => (
 	<div className='flex justify-start gap-3'>
 		{githubLink && (
 			<a
-				href={githubLink}
+				href={`${githubLink}?t=${Date.now()}`}
 				target='_blank'
 				rel='noopener noreferrer'
 				className='px-2 p-1 gap-2 flex justify-center items-center bg-black rounded-md hover:bg-gray-900 hover:scale-105 text-white transition-all duration-200'>
@@ -32,7 +34,7 @@ const ProjectLinks = ({ githubLink, deployedLink }) => (
 		)}
 		{deployedLink && (
 			<a
-				href={deployedLink}
+				href={`${deployedLink}?t=${Date.now()}`}
 				target='_blank'
 				rel='noopener noreferrer'
 				className='px-2 p-1 gap-2 flex justify-center items-center bg-black rounded-md hover:bg-gray-900 hover:scale-105 text-white transition-all duration-200'>
@@ -45,47 +47,51 @@ const ProjectLinks = ({ githubLink, deployedLink }) => (
 	</div>
 );
 
-const ProjectCard = ({ project, index }) => (
-	<div
-		className={`relative flex flex-col md:flex-row items-center mb-16 md:mb-24 ${
-			index % 2 !== 0 ? 'md:flex-row-reverse' : ''
-		}`}>
-		<div className='w-full md:w-3/5 lg:w-2/3 relative mb-0 group'>
-			<div className='bg-white rounded-xl shadow-lg border border-gray-200 p-4 transition-all duration-300 hover:shadow-xl'>
-				<div className='relative'>
-					<a
-						href={project.deployedLink || project.githubLink}
-						target='_blank'
-						rel='noopener noreferrer'
-						className='cursor-pointer'>
-						<Image
-							src={project.imagePath}
-							width={800}
-							height={500}
-							alt={`${project.name} preview`}
-							className='w-full h-auto object-cover rounded-lg transition-transform duration-300 group-hover:scale-[1.02] hover:scale-[1.02]'
-						/>
-						<div className='hidden md:block absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg'></div>
-					</a>
-				</div>
+const ProjectCard = ({ project, index }) => {
+	const imageUrl = `${project.imagePath}?t=${Date.now()}`;
 
-				<div className='md:hidden mt-4 space-y-4'>
-					<h3 className='text-xl font-semibold text-gray-800 transition-colors duration-300 hover:text-blue-600'>
-						{project.name}
-					</h3>
-					<p className='text-sm text-gray-700 leading-relaxed'>
-						{project.description}
-					</p>
-					<TechStack techStack={project.techStack} />
-					<ProjectLinks
-						githubLink={project.githubLink}
-						deployedLink={project.deployedLink}
-					/>
+	return (
+		<div
+			className={`relative flex flex-col md:flex-row items-center mb-16 md:mb-24 ${
+				index % 2 !== 0 ? 'md:flex-row-reverse' : ''
+			}`}>
+			<div className='w-full md:w-3/5 lg:w-2/3 relative mb-0 group'>
+				<div className='bg-white rounded-xl shadow-lg border border-gray-200 p-4 transition-all duration-300 hover:shadow-xl'>
+					<div className='relative'>
+						<a
+							href={project.deployedLink || project.githubLink}
+							target='_blank'
+							rel='noopener noreferrer'
+							className='cursor-pointer'>
+							<Image
+								src={imageUrl}
+								width={800}
+								height={500}
+								alt={`${project.name} preview`}
+								className='w-full h-auto object-cover rounded-lg transition-transform duration-300 group-hover:scale-[1.02] hover:scale-[1.02]'
+								unoptimized={true}
+							/>
+							<div className='hidden md:block absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg'></div>
+						</a>
+					</div>
+
+					<div className='md:hidden mt-4 space-y-4'>
+						<h3 className='text-xl font-semibold text-gray-800 transition-colors duration-300 hover:text-blue-600'>
+							{project.name}
+						</h3>
+						<p className='text-sm text-gray-700 leading-relaxed'>
+							{project.description}
+						</p>
+						<TechStack techStack={project.techStack} />
+						<ProjectLinks
+							githubLink={project.githubLink}
+							deployedLink={project.deployedLink}
+						/>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div
-			className={`hidden md:flex w-full md:w-1/2 lg:w-2/5 bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-gray-200 
+			<div
+				className={`hidden md:flex w-full md:w-1/2 lg:w-2/5 bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-gray-200 
                 md:absolute md:top-10 ${
 									index % 2 === 0 ? 'md:right-0' : 'md:left-0'
 								} 
@@ -93,22 +99,35 @@ const ProjectCard = ({ project, index }) => (
 									index % 2 === 0 ? 'md:text-right' : 'md:text-left'
 								}
                 transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-xl`}>
-			<h3 className='mb-3 text-xl font-semibold text-gray-800 transition-colors duration-300 hover:text-blue-600'>
-				{project.name}
-			</h3>
-			<p className='text-sm text-gray-700 leading-relaxed mb-4'>
-				{project.description}
-			</p>
-			<TechStack techStack={project.techStack} />
-			<ProjectLinks
-				githubLink={project.githubLink}
-				deployedLink={project.deployedLink}
-			/>
+				<h3 className='mb-3 text-xl font-semibold text-gray-800 transition-colors duration-300 hover:text-blue-600'>
+					{project.name}
+				</h3>
+				<p className='text-sm text-gray-700 leading-relaxed mb-4'>
+					{project.description}
+				</p>
+				<TechStack techStack={project.techStack} />
+				<ProjectLinks
+					githubLink={project.githubLink}
+					deployedLink={project.deployedLink}
+				/>
+			</div>
 		</div>
-	</div>
-);
+	);
+};
 
 const Projects = ({ projects }) => {
+	useEffect(() => {
+		// Clear browser cache for images
+		const clearImageCache = () => {
+			const images = document.getElementsByTagName('img');
+			for (let img of images) {
+				img.src = `${img.src}?t=${Date.now()}`;
+			}
+		};
+
+		clearImageCache();
+	}, []);
+
 	return (
 		<div className='bg-gray-50 py-12 px-4 md:px-0'>
 			<h2 className='font-bold text-2xl md:text-3xl text-center mb-8 md:mb-12 text-gray-900'>
