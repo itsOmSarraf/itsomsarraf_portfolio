@@ -7,7 +7,7 @@ export const dummyProjects = [
 		githubLink: 'https://github.com/itsomsarraf/dishcovery-nextjs',
 		deployedLink: 'https://dishcovery-nextjs.vercel.app',
 		description:
-			'Snap a photo of your vegetables, input preferences, and get personalized meal suggestions instantly.'
+			'AI-powered kitchen companion that turns your ingredients into personalized recipe suggestions. Snap, share preferences, and discover your next meal.'
 	},
 	{
 		name: 'Surveyor',
@@ -16,7 +16,8 @@ export const dummyProjects = [
 		techStack: 'Nextjs, Gemini, Zustand, Shadcn, Tailwind',
 		githubLink: 'https://github.com/itsomsarraf/surveyor',
 		deployedLink: 'https://surveyor-demo.vercel.app',
-		description: 'Create Surveys and get Generated AI responses'
+		description:
+			'Smart survey platform that generates AI-powered responses. Create surveys and get instant, realistic feedback for testing and prototyping.'
 	},
 	{
 		name: 'ChatMarks',
@@ -27,26 +28,6 @@ export const dummyProjects = [
 		deployedLink:
 			'https://chromewebstore.google.com/detail/chatmarks/nhijgdophdlajaepkhffdccjkmccenon',
 		description:
-			'A chrome Extension to save the chat urls in labelled format from various LLMs like GPT, Claude, Gemini and Mistral in a central place'
+			'Chrome extension to organize and tag your AI chat conversations from ChatGPT, Claude, Gemini, and Mistral in one central hub.'
 	}
-	// {
-	// 	name: 'Project Beta',
-	// 	imagePath: 'https://picsum.photos/id/1/800/500',
-	// 	techStack: 'Vue.js, Express, PostgreSQL',
-	// 	githubLink: 'https://github.com/user/project-beta',
-	// 	deployedLink: 'https://project-beta.com',
-	// 	description:
-	// 		'An e-commerce platform with real-time inventory management and AI-powered product recommendations.',
-	// 	dateCreated: 'September 2023'
-	// },
-	// {
-	// 	name: 'Project Gamma',
-	// 	imagePath: 'https://picsum.photos/id/2/800/500',
-	// 	techStack: 'Angular, Django, MySQL',
-	// 	githubLink: 'https://github.com/user/project-gamma',
-	// 	deployedLink: 'https://project-gamma.com',
-	// 	description:
-	// 		'A collaborative task management tool with integrated chat functionality and project analytics dashboard.',
-	// 	dateCreated: 'December 2023'
-	// }
 ];
