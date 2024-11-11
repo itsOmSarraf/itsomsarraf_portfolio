@@ -29,5 +29,15 @@ export const dummyProjects = [
 			'https://chromewebstore.google.com/detail/chatmarks/nhijgdophdlajaepkhffdccjkmccenon',
 		description:
 			'Chrome extension to organize and tag your AI chat conversations from ChatGPT, Claude, Gemini, and Mistral in one central hub.'
+	},
+	{
+		name: 'COVID Retweet Bot',
+		imagePath:
+			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/covid-retweet.png',
+		techStack: 'Tweepy API, Python',
+		githubLink: 'https://github.com/itsomsarraf/COVID_RETWEET',
+		deployedLink: 'https://x.com/covid_retweet',
+		description:
+			'Emergency response Twitter bot that amplified over 800+ verified COVID-19 resource tweets during the pandemic crisis. Auto-retweeted verified information about beds, oxygen, plasma, and medical supplies. Successfully served its purpose and was retired as resource demands decreased.'
 	}
 ];
