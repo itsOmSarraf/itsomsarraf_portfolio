@@ -9,6 +9,16 @@ export const dummyProjects = [
 		description:
 			'Snap a photo of your vegetables, input preferences, and get personalized meal suggestions instantly.'
 		// dateCreated: 'Oco 2024'
+	},
+	{
+		name: 'Surveyor',
+		imagePath:
+			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/surveyor.png',
+		techStack: 'Nextjs, Gemini, Zustand',
+		githubLink: 'https://github.com/itsomsarraf/surveyor',
+		deployedLink: 'surveyor-demo.vercel.app',
+		description: 'Create Surveys and get Generated AI responses'
+		// dateCreated: 'Oco 2024'
 	}
 	// {
 	// 	name: 'Project Beta',
