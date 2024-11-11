@@ -126,7 +126,7 @@ const Projects = ({ projects }) => {
 					<p className='text-gray-600 text-xl'>
 						More Projects Coming Soon
 						<span className='block mt-2 text-md text-gray-500 italic'>
-							Currently focused on academic and client projects. Check back
+							Currently building some cool stuff and client projects. Check back
 							later!
 						</span>
 					</p>
