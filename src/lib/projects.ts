@@ -16,7 +16,7 @@ export const dummyProjects = [
 			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/surveyor.png',
 		techStack: 'Nextjs, Gemini, Zustand',
 		githubLink: 'https://github.com/itsomsarraf/surveyor',
-		deployedLink: 'surveyor-demo.vercel.app',
+		deployedLink: 'https://surveyor-demo.vercel.app',
 		description: 'Create Surveys and get Generated AI responses'
 		// dateCreated: 'Oco 2024'
 	}
