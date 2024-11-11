@@ -1,32 +1,40 @@
 export const experiences = [
 	{
-		title: 'FullStack Intern',
+		title: 'Full Stack Intern',
 		company: 'Vexio.in',
 		location: 'Remote',
 		duration: 'May 2024 - August 2024',
-		Sdate: 'May 13, 2024',
+		Sdate: '2024-05-13',
 		Edate: 'Present',
 		description: [
-			'Working with a small team of 6 people on the GenAi MVP',
-			'Stack: Nextjs and Django'
+			'Contributing to GenAI MVP development with a small engineering team',
+			'Built full-stack features using Next.js frontend and Django backend',
+			'Implemented state management with Zustand and animations using Framer Motion'
 		],
 		url: 'https://vexio.in',
-		stack: ['Next.js', 'Framer Motion', 'Zustand']
+		stack: [
+			'Next.js',
+			'Django',
+			'Framer Motion',
+			'Zustand',
+			'Reactjs',
+			'Tailwind'
+		]
 	},
 	{
-		title: 'Solo Founding Dev',
+		title: 'Founding Engineer',
 		company: 'FOF.link',
 		location: 'Remote',
 		duration: 'April 2024 - June 2024',
-		Sdate: 'April, 2024',
+		Sdate: '2024-04',
 		Edate: 'Present',
 		description: [
-			'Worked as a solo Engineer at FOF.link',
-			'Learnt Nextjs on day 0 of joining',
-			'Building the platform solely :D'
+			'Lead end-to-end development of the FOF.link platform as sole engineer',
+			'Architected and implemented full-stack solution using Next.js and Neo4j',
+			'Integrated authentication and user management using Clerk'
 		],
 		url: 'https://fof.link',
-		stack: ['Next.js', 'Neo4j', 'Clerk']
+		stack: ['Next.js', 'Neo4j', 'Clerk', 'TypeScript', 'Tailwind']
 	}
 	// {
 	// 	title: 'GDSC Lead',

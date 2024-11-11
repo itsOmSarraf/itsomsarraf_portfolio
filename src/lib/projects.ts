@@ -3,22 +3,31 @@ export const dummyProjects = [
 		name: 'Dishcovery',
 		imagePath:
 			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/dishcovery-nextjs.png',
-		techStack: 'Nextjs, Gemini, Zustand',
+		techStack: 'Nextjs, Gemini, Zustand, Shadcn, Tailwind',
 		githubLink: 'https://github.com/itsomsarraf/dishcovery-nextjs',
 		deployedLink: 'https://dishcovery-nextjs.vercel.app',
 		description:
 			'Snap a photo of your vegetables, input preferences, and get personalized meal suggestions instantly.'
-		// dateCreated: 'Oco 2024'
 	},
 	{
 		name: 'Surveyor',
 		imagePath:
 			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/surveyor.png',
-		techStack: 'Nextjs, Gemini, Zustand',
+		techStack: 'Nextjs, Gemini, Zustand, Shadcn, Tailwind',
 		githubLink: 'https://github.com/itsomsarraf/surveyor',
 		deployedLink: 'https://surveyor-demo.vercel.app',
 		description: 'Create Surveys and get Generated AI responses'
-		// dateCreated: 'Oco 2024'
+	},
+	{
+		name: 'ChatMarks',
+		imagePath:
+			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/chatmarks.png',
+		techStack: 'Plasmo, Reactjs, Tailwind',
+		githubLink: 'https://github.com/itsOmSarraf/chatmarks',
+		deployedLink:
+			'https://chromewebstore.google.com/detail/chatmarks/nhijgdophdlajaepkhffdccjkmccenon',
+		description:
+			'A chrome Extension to save the chat urls in labelled format from various LLMs like GPT, Claude, Gemini and Mistral in a central place'
 	}
 	// {
 	// 	name: 'Project Beta',
