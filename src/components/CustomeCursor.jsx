@@ -6,9 +6,12 @@ import { LuMousePointer2, LuPointer } from 'react-icons/lu';
 const CustomCursor = () => {
 	const cursorRef = useRef(null);
 	const [isPointer, setIsPointer] = useState(false);
-	const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+	const [isMobile, setIsMobile] = useState(
+		typeof window !== 'undefined' ? window.innerWidth < 768 : false
+	);
 
 	useEffect(() => {
+		if (typeof window === 'undefined') return;
 		document.body.classList.add('cursor-none');
 
 		const cursor = cursorRef.current;
@@ -49,7 +52,9 @@ const CustomCursor = () => {
 
 	useEffect(() => {
 		const handleResize = () => {
-			setIsMobile(window.innerWidth < 768);
+			if (typeof window !== 'undefined') {
+				setIsMobile(window.innerWidth < 768);
+			}
 		};
 
 		window.addEventListener('resize', handleResize);
