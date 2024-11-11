@@ -6,6 +6,7 @@ import { LuMousePointer2, LuPointer } from 'react-icons/lu';
 const CustomCursor = () => {
 	const cursorRef = useRef(null);
 	const [isPointer, setIsPointer] = useState(false);
+	const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
 	useEffect(() => {
 		document.body.classList.add('cursor-none');
@@ -46,10 +47,24 @@ const CustomCursor = () => {
 		};
 	}, []);
 
+	useEffect(() => {
+		const handleResize = () => {
+			setIsMobile(window.innerWidth < 768);
+		};
+
+		window.addEventListener('resize', handleResize);
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, []);
+
 	return (
 		<div
 			ref={cursorRef}
-			className='custom-cursor fixed pointer-events-none z-50 md:visible'
+			className={`custom-cursor fixed pointer-events-none z-50 ${
+				isMobile ? 'hidden' : 'visible'
+			}`}
 			style={{ top: '-1px', left: '-1px' }}>
 			{isPointer ? (
 				<LuPointer
