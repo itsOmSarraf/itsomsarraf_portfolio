@@ -122,11 +122,12 @@ const Projects = ({ projects }) => {
 						index={index}
 					/>
 				))}
-				<div className='text-center mt-12 mb-8'>
-					<p className='text-gray-600 text-xl italic'>
-						More exciting projects coming soon...
-						<span className='block mt-2 text-md text-gray-500'>
-							(under development)
+				<div className='text-center mt-12 mb-8 italic'>
+					<p className='text-gray-600 text-xl'>
+						More Projects Coming Soon
+						<span className='block mt-2 text-md text-gray-500 italic'>
+							Currently focused on academic and client projects. Check back
+							later!
 						</span>
 					</p>
 				</div>
