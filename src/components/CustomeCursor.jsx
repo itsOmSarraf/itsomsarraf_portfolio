@@ -22,9 +22,9 @@ const CustomCursor = () => {
 		};
 
 		// Function to check if screen is mobile-sized (below Tailwind's md breakpoint)
-		const isMobileScreen = () => {
-			return window.innerWidth < 768;
-		};
+		// const isMobileScreen = () => {
+		// 	return window.innerWidth < 768;
+		// };
 
 		const updateCursorVisibility = () => {
 			// Show cursor if it's not a touch-only device
