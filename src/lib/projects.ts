@@ -24,7 +24,7 @@ export const dummyProjects = [
 		imagePath:
 			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/chatmark.png',
 		techStack: 'Plasmo, Reactjs, Tailwind',
-		githubLink: 'https://github.com/itsOmSarraf/chatmarks',
+		githubLink: 'https://github.com/itsOmSarraf/chatmark',
 		deployedLink:
 			'https://chromewebstore.google.com/detail/chatmark/ijghhkhojebllacdnpibmjodkgdfpnhm?authuser=1&hl=en-GB',
 		description:
