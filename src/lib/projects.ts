@@ -19,17 +19,17 @@ export const dummyProjects = [
 		description:
 			'Smart survey platform that generates AI-powered responses. Create surveys and get instant, realistic feedback for testing and prototyping.'
 	},
-	// {
-	// 	name: 'ChatMarks',
-	// 	imagePath:
-	// 		'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/chatmarks.png',
-	// 	techStack: 'Plasmo, Reactjs, Tailwind',
-	// 	githubLink: 'https://github.com/itsOmSarraf/chatmarks',
-	// 	deployedLink:
-	// 		'https://chromewebstore.google.com/detail/chatmarks/nhijgdophdlajaepkhffdccjkmccenon',
-	// 	description:
-	// 		'Chrome extension to organize and tag your AI chat conversations from ChatGPT, Claude, Gemini, and Mistral in one central hub.'
-	// },
+	{
+		name: 'ChatMarks',
+		imagePath:
+			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/chatmarks.png',
+		techStack: 'Plasmo, Reactjs, Tailwind',
+		githubLink: 'https://github.com/itsOmSarraf/chatmarks',
+		deployedLink:
+			'https://chromewebstore.google.com/detail/chatmark/ijghhkhojebllacdnpibmjodkgdfpnhm?authuser=1&hl=en-GB',
+		description:
+			'Chrome extension to organize and tag your AI chat conversations from ChatGPT, Claude, Gemini, and Mistral in one central hub.'
+	},
 	{
 		name: 'COVID Retweet Bot',
 		imagePath:
