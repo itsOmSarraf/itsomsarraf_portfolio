@@ -20,9 +20,9 @@ export const dummyProjects = [
 			'Smart survey platform that generates AI-powered responses. Create surveys and get instant, realistic feedback for testing and prototyping.'
 	},
 	{
-		name: 'ChatMarks',
+		name: 'ChatMark',
 		imagePath:
-			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/chatmarks.png',
+			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/chatmark.png',
 		techStack: 'Plasmo, Reactjs, Tailwind',
 		githubLink: 'https://github.com/itsOmSarraf/chatmarks',
 		deployedLink:
