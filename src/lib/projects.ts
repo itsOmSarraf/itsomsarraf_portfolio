@@ -3,7 +3,7 @@ export const dummyProjects = [
 		name: 'Dishcovery',
 		imagePath:
 			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/dishcovery-nextjs.png',
-		techStack: 'Nextjs, Gemini, Zustand, Shadcn, Tailwind',
+		techStack: 'Nextjs, Llama, Zustand, Shadcn, Tailwind',
 		githubLink: 'https://github.com/itsomsarraf/dishcovery-nextjs',
 		deployedLink: 'https://dishcovery-nextjs.vercel.app',
 		description:
