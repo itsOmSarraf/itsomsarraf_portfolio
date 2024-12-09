@@ -15,7 +15,7 @@ export const dummyProjects = [
 			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/surveyor.png',
 		techStack: 'Nextjs, Gemini, Zustand, Shadcn, Tailwind',
 		githubLink: 'https://github.com/itsomsarraf/surveyor',
-		deployedLink: 'https://surveyor-demo.vercel.app',
+		deployedLink: 'https://surveyor.one',
 		description:
 			'Smart survey platform that generates AI-powered responses. Create surveys and get instant, realistic feedback for testing and prototyping.'
 	},
