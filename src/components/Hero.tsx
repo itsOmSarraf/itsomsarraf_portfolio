@@ -1,6 +1,6 @@
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import Image from "next/image";
-import OmSarraf from "@/public/Om_Sarraf.png";
+import OmSarraf from "@/public/om_new.jpeg";
 import Socials from "../app/Socials";
 import { GoArrowDownLeft } from "react-icons/go";
 
@@ -34,13 +34,15 @@ export default function Hero() {
                             <Socials />
                         </div>
                         <div className="w-full md:w-auto flex justify-center">
-                            <Image
-                                src={OmSarraf}
-                                alt="Om Sarraf"
-                                width={200}
-                                height={200}
-                                className="rounded-full"
-                            />
+                            <div className="h-[200px] w-[200px] overflow-hidden rounded-full">
+                                <Image
+                                    src={OmSarraf}
+                                    alt="Om Sarraf"
+                                    width={200}
+                                    height={200}
+                                    className="object-cover w-full h-full"
+                                />
+                            </div>
                         </div>
                     </div>
                 </RoughNotationGroup>
