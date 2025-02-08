@@ -4,20 +4,22 @@ export const dummyProjects = [
 		imagePath:
 			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/topnode.png',
 		techStack: 'Nextjs, TailwindCSS',
-		githubLink: '', // this is private work
+		githubLink:
+			'https://pagespeed.web.dev/analysis/https-topnode-app/0cqbyeyq6s?form_factor=desktop', // this is private work
 		deployedLink: 'https://topnode.app',
 		description:
-			'Frontend redesign for a Japan-based Web3 company, focusing on modern UI/UX principles and responsive design.'
+			'Developed complete frontend a Japan-based Web3 company as per their requirements'
 	},
 	{
 		name: 'Volnex',
 		imagePath:
 			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/volnex.png',
 		techStack: 'Nextjs, TailwindCSS, Shadcn, CMS',
-		githubLink: '', // this is private work
+		githubLink:
+			'https://pagespeed.web.dev/analysis/https-www-volnex-com/3u5g8j1wih?form_factor=desktop', // this is private work
 		deployedLink: 'https://volnex.com',
 		description:
-			'Developed complete frontend with sophisticated animations and pixel-perfect design for a Dubai-based forex company. Achieved 95+ Lighthouse score with CMS integration.'
+			'Developed complete frontend with minor animations and pixel-perfect design for a Dubai-based forex company. Achieved 95+ Lighthouse score with CMS integration.'
 	},
 	{
 		name: 'Gamerge.ai',
