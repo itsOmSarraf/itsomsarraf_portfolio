@@ -4,7 +4,7 @@ export const dummyProjects = [
 		imagePath:
 			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/topnode.png',
 		techStack: 'Nextjs, TailwindCSS',
-		githubLink: '', // assuming this is private work
+		githubLink: '', // this is private work
 		deployedLink: 'https://topnode.app',
 		description:
 			'Frontend redesign for a Japan-based Web3 company, focusing on modern UI/UX principles and responsive design.'
@@ -14,7 +14,7 @@ export const dummyProjects = [
 		imagePath:
 			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/volnex.png',
 		techStack: 'Nextjs, TailwindCSS, Shadcn, CMS',
-		githubLink: '', // assuming this is private work
+		githubLink: '', // this is private work
 		deployedLink: 'https://volnex.com',
 		description:
 			'Developed complete frontend with sophisticated animations and pixel-perfect design for a Dubai-based forex company. Achieved 95+ Lighthouse score with CMS integration.'
@@ -24,7 +24,7 @@ export const dummyProjects = [
 		imagePath:
 			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/gamerge.png',
 		techStack: 'Nextjs, ThreeJS, TailwindCSS, Shadcn',
-		githubLink: '', // assuming this is private work
+		githubLink: '', // this is private work
 		deployedLink: 'https://gamerge.ai',
 		description:
 			'Enhanced platform with ThreeJS animations and redesign for a Dubai-based Web3 company, creating an immersive user experience.'
@@ -44,7 +44,7 @@ export const dummyProjects = [
 		imagePath:
 			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/surveyor.png',
 		techStack: 'Nextjs, Gemini, Zustand, Shadcn, Tailwind',
-		githubLink: 'https://github.com/itsomsarraf/surveyor',
+		githubLink: '', // this is private work
 		deployedLink: 'https://surveyor.one',
 		description:
 			'Smart survey platform that generates AI-powered responses. Create surveys and get instant, realistic feedback for testing and prototyping.'
