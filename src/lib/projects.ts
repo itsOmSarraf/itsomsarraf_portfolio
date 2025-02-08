@@ -1,5 +1,35 @@
 export const dummyProjects = [
 	{
+		name: 'TopNode',
+		imagePath:
+			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/topnode.png',
+		techStack: 'Nextjs, TailwindCSS',
+		githubLink: '', // assuming this is private work
+		deployedLink: 'https://topnode.app',
+		description:
+			'Frontend redesign for a Japan-based Web3 company, focusing on modern UI/UX principles and responsive design.'
+	},
+	{
+		name: 'Volnex',
+		imagePath:
+			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/volnex.png',
+		techStack: 'Nextjs, TailwindCSS, Shadcn, CMS',
+		githubLink: '', // assuming this is private work
+		deployedLink: 'https://volnex.com',
+		description:
+			'Developed complete frontend with sophisticated animations and pixel-perfect design for a Dubai-based forex company. Achieved 95+ Lighthouse score with CMS integration.'
+	},
+	{
+		name: 'Gamerge.ai',
+		imagePath:
+			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/gamerge.png',
+		techStack: 'Nextjs, ThreeJS, TailwindCSS, Shadcn',
+		githubLink: '', // assuming this is private work
+		deployedLink: 'https://gamerge.ai',
+		description:
+			'Enhanced platform with ThreeJS animations and redesign for a Dubai-based Web3 company, creating an immersive user experience.'
+	},
+	{
 		name: 'Dishcovery',
 		imagePath:
 			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/dishcovery-nextjs.png',
