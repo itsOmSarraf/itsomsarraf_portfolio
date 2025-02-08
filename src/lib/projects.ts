@@ -8,7 +8,7 @@ export const dummyProjects = [
 			'https://pagespeed.web.dev/analysis/https-topnode-app/0cqbyeyq6s?form_factor=desktop', // this is private work
 		deployedLink: 'https://topnode.app',
 		description:
-			'Developed complete frontend a Japan-based Web3 company as per their requirements'
+			'Developed complete frontend for a Japan based Web3 company as per their requirements.'
 	},
 	{
 		name: 'Volnex',
@@ -19,7 +19,7 @@ export const dummyProjects = [
 			'https://pagespeed.web.dev/analysis/https-www-volnex-com/3u5g8j1wih?form_factor=desktop', // this is private work
 		deployedLink: 'https://volnex.com',
 		description:
-			'Developed complete frontend with minor animations and pixel-perfect design for a Dubai-based forex company. Achieved 95+ Lighthouse score with CMS integration.'
+			'Developed complete frontend with simple animations and pixel-perfect design for a Dubai based forex company. Achieved 95+ Lighthouse score and also did CMS integration.'
 	},
 	{
 		name: 'Gamerge.ai',
@@ -29,7 +29,7 @@ export const dummyProjects = [
 		githubLink: '', // this is private work
 		deployedLink: 'https://gamerge.ai',
 		description:
-			'Enhanced platform with ThreeJS animations and redesign for a Dubai-based Web3 company, creating an immersive user experience.'
+			'Enhanced platform with ThreeJS animations and redesign for a Dubai based Web3 company, creating an immersive user experience.'
 	},
 	{
 		name: 'Dishcovery',
