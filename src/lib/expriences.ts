@@ -1,7 +1,7 @@
 export const experiences = [
 	{
 		title: 'Full Stack Intern',
-		company: 'Vexio.in',
+		company: 'Stealth Startup',
 		location: 'Remote',
 		duration: 'May 2024 - August 2024',
 		Sdate: '2024-05-13',
