@@ -25,7 +25,7 @@ export default function Hero() {
                                             rel="noopener noreferrer"
                                             className="underline"
                                         >
-                                            freelancing (open to gigs)
+                                            freelancing
                                         </a>
                                         <GoArrowDownLeft className="ml-1" />
                                     </span>
