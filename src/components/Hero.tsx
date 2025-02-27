@@ -13,9 +13,9 @@ export default function Hero() {
                         <div className="w-full md:w-1/2 md:mt-0 mt-2 text-center md:text-left">
                             <h1 className="font-bold text-4xl md:text-5xl mb-2 md:mb-0">FullStack Developer</h1>
                             <p className="text-lg w-full mb-4">
-                                Om Sarraf is an individual from India who is currently looking for{' '}
+                                Om Sarraf is an individual from India who is currently {' '}
                                 <span className="whitespace-nowrap font-bold">
-                                    <RoughNotation type="circle" color="#B8001F">part-time/intern roles</RoughNotation>
+                                    <RoughNotation type="circle" color="#B8001F">shipping cool stuff</RoughNotation>
                                 </span>, and also does{' '}
                                 <RoughNotation type="highlight" color="#FFEB00">
                                     <span className="inline-flex items-center">
