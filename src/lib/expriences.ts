@@ -13,6 +13,7 @@ export const experiences = [
 		url: 'https://crackeddevs.com/',
 		stack: [
 			'React Native',
+			'Supabase'
 		]
 	},
 	{
