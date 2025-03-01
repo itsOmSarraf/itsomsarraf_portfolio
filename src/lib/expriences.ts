@@ -1,11 +1,27 @@
 export const experiences = [
+		{
+		title: 'Full Stack Engineer',
+		company: 'Cracked Devs',
+		location: 'Remote',
+		duration: 'Feb 2025 - Present',
+		Sdate: '2025-02-26',
+		Edate: 'Present',
+		description: [
+			'Shipping consumer facing mobile apps',
+
+		],
+		url: 'https://crackeddevs.com/',
+		stack: [
+			'React Native',
+		]
+	},
 	{
 		title: 'Full Stack Intern',
 		company: 'Stealth Startup',
 		location: 'Remote',
 		duration: 'May 2024 - August 2024',
 		Sdate: '2024-05-13',
-		Edate: 'Present',
+		Edate: '2024-08-31',
 		description: [
 			'Contributed to GenAI MVP development with a small engineering team',
 			'Built full-stack features using Next.js frontend and Django backend',
