@@ -46,8 +46,8 @@ export const experiences = [
 		Sdate: '2024-04',
 		Edate: 'Present',
 		description: [
-			'Lead end-to-end development of the FOF.link platform as sole engineer',
-			'Architected and implemented full-stack solution using Next.js and Neo4j',
+			'Led end-to-end development of the FOF.link platform as a solo engineer',
+			'Architected and implemented a full-stack solution using Next.js and Neo4j',
 			'Integrated authentication and user management using Clerk'
 		],
 		url: 'https://fof.link',
