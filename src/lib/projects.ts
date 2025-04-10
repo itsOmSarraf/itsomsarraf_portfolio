@@ -2,7 +2,7 @@ export const dummyProjects = [
 	{
 		name: 'TopNode',
 		imagePath:
-			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/topnode.png',
+			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/main/src/public/topnode.png',
 		techStack: 'Nextjs, TailwindCSS',
 		githubLink:
 			'https://pagespeed.web.dev/analysis/https-topnode-app/0cqbyeyq6s?form_factor=desktop', // this is private work
@@ -13,7 +13,7 @@ export const dummyProjects = [
 	{
 		name: 'Volnex',
 		imagePath:
-			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/volnex.png',
+			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/main/src/public/volnex.png',
 		techStack: 'Nextjs, TailwindCSS, Shadcn, CMS',
 		githubLink:
 			'https://pagespeed.web.dev/analysis/https-www-volnex-com/3u5g8j1wih?form_factor=desktop', // this is private work
@@ -24,7 +24,7 @@ export const dummyProjects = [
 	{
 		name: 'Gamerge.ai',
 		imagePath:
-			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/gamerge.png',
+			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/main/src/public/gamerge.png',
 		techStack: 'Nextjs, ThreeJS, TailwindCSS, Shadcn',
 		githubLink: '', // this is private work
 		deployedLink: 'https://gamerge.ai',
@@ -34,7 +34,7 @@ export const dummyProjects = [
 	{
 		name: 'Dishcovery',
 		imagePath:
-			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/dishcovery-nextjs.png',
+			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/main/src/public/dishcovery-nextjs.png',
 		techStack: 'Nextjs, Llama, Zustand, Shadcn, Tailwind',
 		githubLink: 'https://github.com/itsomsarraf/dishcovery-nextjs',
 		deployedLink: 'https://dishcovery-nextjs.vercel.app',
@@ -44,7 +44,7 @@ export const dummyProjects = [
 	{
 		name: 'Surveyor',
 		imagePath:
-			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/surveyor.png',
+			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/main/src/public/surveyor.png',
 		techStack: 'Nextjs, Gemini, Zustand, Shadcn, Tailwind',
 		githubLink: '', // this is private work
 		deployedLink: 'https://surveyor.one',
@@ -54,7 +54,7 @@ export const dummyProjects = [
 	{
 		name: 'ChatMark',
 		imagePath:
-			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/chatmark.png',
+			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/main/src/public/chatmark.png',
 		techStack: 'Plasmo, Reactjs, Tailwind',
 		githubLink: 'https://github.com/itsOmSarraf/chatmark',
 		deployedLink:
@@ -65,7 +65,7 @@ export const dummyProjects = [
 	{
 		name: 'COVID Retweet Bot',
 		imagePath:
-			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/master/src/public/covid-retweet.png',
+			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/main/src/public/covid-retweet.png',
 		techStack: 'Tweepy API, Python',
 		githubLink: 'https://github.com/itsomsarraf/COVID_RETWEET',
 		deployedLink: 'https://x.com/covid_retweet',
