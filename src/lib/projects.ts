@@ -1,5 +1,17 @@
 export const dummyProjects = [
 	{
+		name: 'Subly - Create Subliminals',
+		imagePath:
+			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/main/src/public/subly.png',
+		techStack: 'ReactNative, Supabase, FastAPI, FFmpeg',
+		githubLink: '',
+		deployedLink:
+			'https://apps.apple.com/us/app/subly-create-subliminals/id6741949047',
+		description:
+			'Lead developer at TryMagicApps (Cracked Devs), implementing seamless audio affirmation features for personalized subliminal messages. Acquired 1,000+ users with 5-star App Store rating through weekly feature updates.'
+	},
+
+	{
 		name: 'TopNode',
 		imagePath:
 			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/main/src/public/topnode.png',
