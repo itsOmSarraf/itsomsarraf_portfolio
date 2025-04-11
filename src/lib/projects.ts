@@ -8,7 +8,7 @@ export const dummyProjects = [
 		deployedLink:
 			'https://apps.apple.com/us/app/subly-create-subliminals/id6741949047',
 		description:
-			'Lead developer at TryMagicApps (Cracked Devs), implementing seamless audio affirmation features for personalized subliminal messages. Acquired 1,000+ users with 5-star App Store rating through weekly feature updates.'
+			'An affirmations app that allows you to create your own subliminal messages and play them on your device. Acquired 1400+ users.'
 	},
 
 	{
