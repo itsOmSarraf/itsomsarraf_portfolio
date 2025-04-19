@@ -1,20 +1,14 @@
 export const experiences = [
-		{
+	{
 		title: 'Full Stack Engineer',
 		company: 'Cracked Devs',
 		location: 'Remote',
-		duration: 'Feb 2025 - Present',
+		duration: 'Feb 2025 - April 2025',
 		Sdate: '2025-02-26',
-		Edate: 'Present',
-		description: [
-			'Shipping consumer facing mobile apps',
-
-		],
+		Edate: '2025-04-30',
+		description: ['Shipping consumer facing mobile apps'],
 		url: 'https://crackeddevs.com/',
-		stack: [
-			'React Native',
-			'Supabase'
-		]
+		stack: ['React Native', 'Supabase']
 	},
 	{
 		title: 'Full Stack Intern',
