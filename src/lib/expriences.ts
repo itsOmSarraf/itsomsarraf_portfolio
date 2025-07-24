@@ -1,5 +1,16 @@
 export const experiences = [
 	{
+		title: 'Fullstack Intern',
+		company: 'Sarvam.ai',
+		location: 'Bangalore, India · Remote',
+		duration: 'June 2025 – Present',
+		Sdate: '2025-06-01',
+		Edate: 'Present',
+		description: ['Working on Agents Platform, more updates soon'],
+		url: 'https://sarvam.ai/',
+		stack: []
+	},
+	{
 		title: 'Full Stack Engineer',
 		company: 'Cracked Devs',
 		location: 'Remote',
