@@ -1,6 +1,6 @@
 export const experiences = [
 	{
-		title: 'Fullstack Intern',
+		title: 'Full Stack Intern',
 		company: 'Sarvam.ai',
 		location: 'Bangalore, India · Remote',
 		duration: 'June 2025 – Present',
@@ -11,7 +11,7 @@ export const experiences = [
 		stack: []
 	},
 	{
-		title: 'Full Stack Engineer',
+		title: 'Contract Full Stack Engineer',
 		company: 'Cracked Devs',
 		location: 'Remote',
 		duration: 'Feb 2025 - April 2025',
