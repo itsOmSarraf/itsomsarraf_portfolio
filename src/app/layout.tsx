@@ -3,8 +3,20 @@ import './globals.css'
 import CustomCursor from "@/components/CustomeCursor";
 
 export const metadata: Metadata = {
-  title: "Om Sarraf",
-  description: "Om Sarraf",
+  title: "Om Sarraf | FullStack Developer",
+  description: "Om Sarraf has worked with brands across the globe. Web, mobile, AI agents, workflows and everything in between.",
+  openGraph: {
+    title: "Om Sarraf | FullStack Developer",
+    description: "Om Sarraf has worked with brands across the globe. Web, mobile, AI agents, workflows and everything in between.",
+    type: "website",
+    images: ["/opengraph-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Om Sarraf | FullStack Developer",
+    description: "Om Sarraf has worked with brands across the globe. Web, mobile, AI agents, workflows and everything in between.",
+    images: ["/opengraph-image.png"],
+  },
 };
 
 export default function RootLayout({
