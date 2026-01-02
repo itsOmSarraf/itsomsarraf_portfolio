@@ -32,7 +32,7 @@ export default function Hero() {
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center font-semibold"
                                     >
-                                        Let's talk
+                                        Let&apos;s talk
                                         <GoArrowDownLeft className="ml-1" />
                                     </a>
                                 </RoughNotation>
