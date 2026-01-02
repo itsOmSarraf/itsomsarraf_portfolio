@@ -47,7 +47,8 @@ export default function RoamingDuck() {
         customSize ?? (width >= 768 ? DUCK_SIZE_DESKTOP : DUCK_SIZE_MOBILE);
       setDuckSize(currentSize);
 
-      const padding = currentSize / 2 + 5;
+      // Padding: push duck right to the edge (accounting for sprite padding)
+      const padding = currentSize / 3 + 4;
       // Corner offset: duck turns before reaching the corner
       const cornerOffset = currentSize / 2;
       
