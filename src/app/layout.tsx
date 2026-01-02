@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import './globals.css'
 import CustomCursor from "@/components/CustomeCursor";
+import RoamingDuck from "@/components/RoamingDuck";
 
 export const metadata: Metadata = {
   title: "Om Sarraf | FullStack Developer",
@@ -31,6 +32,7 @@ export default function RootLayout({
       >
         {children}
         <CustomCursor />
+        <RoamingDuck />
       </body>
     </html>
   );
