@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import duckGif from "@/public/duck_yellow_walk_8fps.gif";
 
-const DUCK_SIZE_MOBILE = 48;
+const DUCK_SIZE_MOBILE = 80;
 const DUCK_SIZE_DESKTOP = 100;
 const DEFAULT_SPEED = 70;
 
