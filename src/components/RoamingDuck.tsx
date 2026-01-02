@@ -48,7 +48,13 @@ export default function RoamingDuck() {
       setDuckSize(currentSize);
 
       const padding = currentSize / 2 + 5;
-      const totalPerimeter = 2 * (width + height);
+      // Corner offset: duck turns before reaching the corner
+      const cornerOffset = currentSize / 2;
+      
+      // Effective edge lengths (shortened by corner offset on each end)
+      const effectiveWidth = width - 2 * cornerOffset;
+      const effectiveHeight = height - 2 * cornerOffset;
+      const totalPerimeter = 2 * (effectiveWidth + effectiveHeight);
 
       // Move progress forward using ref for latest speed
       const currentSpeed = speedRef.current / totalPerimeter;
@@ -62,28 +68,28 @@ export default function RoamingDuck() {
 
       let x: number, y: number, rot: number;
 
-      if (distance < width) {
+      if (distance < effectiveWidth) {
         // Bottom edge - moving RIGHT →
-        x = distance;
+        x = cornerOffset + distance;
         y = height - padding;
         rot = 0;
-      } else if (distance < width + height) {
+      } else if (distance < effectiveWidth + effectiveHeight) {
         // Right edge - moving UP ↑
-        const edgeProgress = distance - width;
+        const edgeProgress = distance - effectiveWidth;
         x = width - padding;
-        y = height - edgeProgress;
+        y = height - cornerOffset - edgeProgress;
         rot = -90;
-      } else if (distance < 2 * width + height) {
+      } else if (distance < 2 * effectiveWidth + effectiveHeight) {
         // Top edge - moving LEFT ←
-        const edgeProgress = distance - width - height;
-        x = width - edgeProgress;
+        const edgeProgress = distance - effectiveWidth - effectiveHeight;
+        x = width - cornerOffset - edgeProgress;
         y = padding;
         rot = 180;
       } else {
         // Left edge - moving DOWN ↓
-        const edgeProgress = distance - 2 * width - height;
+        const edgeProgress = distance - 2 * effectiveWidth - effectiveHeight;
         x = padding;
-        y = edgeProgress;
+        y = cornerOffset + edgeProgress;
         rot = 90;
       }
 
