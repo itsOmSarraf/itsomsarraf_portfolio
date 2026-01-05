@@ -8,12 +8,11 @@ const DUCK_SIZE_MOBILE = 80;
 const DUCK_SIZE_DESKTOP = 100;
 const DEFAULT_SPEED = 110;
 
-const CHROME_EXTENSION_URL = "https://chromewebstore.google.com/detail/x-article-helper/bodljdbijlgpjdehfgenecpgbikjpcpl";
-// const GITHUB_REPO_URL = "https://github.com/itsOmSarraf/chrome-pets"; // TODO: Re-enable when public
+const CHROME_EXTENSION_URL = "https://chromewebstore.google.com/detail/chrome-pets-pets-for-your/ifeomenedhoncedpchjfjcencnmnonen";
 
 // Nudge timing (in ms)
-const NUDGE_SHOW_DURATION = 3000;  // Show for 3 seconds
-const NUDGE_HIDE_DURATION = 8000;  // Hide for 8 seconds
+const NUDGE_SHOW_DURATION = 1500;  // Show for 1.5 seconds
+const NUDGE_HIDE_DURATION = 10000; // Hide for 10 seconds
 
 export default function RoamingDuck() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
