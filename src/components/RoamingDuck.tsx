@@ -6,26 +6,26 @@ import duckGif from "@/public/duck_yellow_walk_8fps.gif";
 
 const DUCK_SIZE_MOBILE = 80;
 const DUCK_SIZE_DESKTOP = 100;
-const DEFAULT_SPEED = 70;
+const DEFAULT_SPEED = 110;
+
+const CHROME_EXTENSION_URL = "https://chromewebstore.google.com/detail/x-article-helper/bodljdbijlgpjdehfgenecpgbikjpcpl";
+// const GITHUB_REPO_URL = "https://github.com/itsOmSarraf/chrome-pets"; // TODO: Re-enable when public
+
+// Nudge timing (in ms)
+const NUDGE_SHOW_DURATION = 3000;  // Show for 3 seconds
+const NUDGE_HIDE_DURATION = 8000;  // Hide for 8 seconds
 
 export default function RoamingDuck() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [rotation, setRotation] = useState(0);
   const [duckSize, setDuckSize] = useState(DUCK_SIZE_DESKTOP);
-  const [customSize, setCustomSize] = useState<number | null>(null);
-  const [speed, setSpeed] = useState(DEFAULT_SPEED);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [sizeInput, setSizeInput] = useState("");
+  const [isMobile, setIsMobile] = useState(false);
+  const [showNudge, setShowNudge] = useState(true);
+  const [nudgeDisabled, setNudgeDisabled] = useState(false);
   
   const progressRef = useRef(0);
   const animationRef = useRef<number | null>(null);
   const lastTimeRef = useRef<number>(0);
-  const speedRef = useRef(DEFAULT_SPEED);
-
-  // Keep speedRef in sync with speed state
-  useEffect(() => {
-    speedRef.current = speed;
-  }, [speed]);
 
   useEffect(() => {
     // Random starting position along the perimeter
@@ -41,10 +41,13 @@ export default function RoamingDuck() {
 
       const width = window.innerWidth;
       const height = window.innerHeight;
+      
+      // Check if mobile
+      const mobile = width < 768;
+      setIsMobile(mobile);
 
-      // Use custom size if set, otherwise responsive default
-      const currentSize =
-        customSize ?? (width >= 768 ? DUCK_SIZE_DESKTOP : DUCK_SIZE_MOBILE);
+      // Use responsive default size
+      const currentSize = mobile ? DUCK_SIZE_MOBILE : DUCK_SIZE_DESKTOP;
       setDuckSize(currentSize);
 
       // Padding: push duck right to the edge (accounting for sprite padding)
@@ -57,8 +60,8 @@ export default function RoamingDuck() {
       const effectiveHeight = height - 2 * cornerOffset;
       const totalPerimeter = 2 * (effectiveWidth + effectiveHeight);
 
-      // Move progress forward using ref for latest speed
-      const currentSpeed = speedRef.current / totalPerimeter;
+      // Move progress forward at default speed
+      const currentSpeed = DEFAULT_SPEED / totalPerimeter;
       progressRef.current += currentSpeed * deltaTime;
       if (progressRef.current >= 1) {
         progressRef.current -= 1;
@@ -107,40 +110,83 @@ export default function RoamingDuck() {
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [customSize]);
+  }, []);
 
-  const handleDuckClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setMenuOpen(!menuOpen);
-    if (!menuOpen) {
-      setSizeInput(customSize?.toString() || duckSize.toString());
-    }
-  };
-
-  const handleSizeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setSizeInput(value);
-    const num = parseInt(value, 10);
-    if (!isNaN(num) && num >= 20 && num <= 1000) {
-      setCustomSize(num);
-    }
-  };
-
-  const handleSpeedChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSpeed(parseInt(e.target.value, 10));
-  };
-
-  // Close menu when clicking outside
+  // Periodic nudge toggle
   useEffect(() => {
-    const handleClickOutside = () => {
-      if (menuOpen) setMenuOpen(false);
+    if (nudgeDisabled) return;
+
+    const toggleNudge = () => {
+      setShowNudge((prev) => !prev);
     };
-    window.addEventListener("click", handleClickOutside);
-    return () => window.removeEventListener("click", handleClickOutside);
-  }, [menuOpen]);
+
+    // Initial show, then toggle periodically
+    const interval = setInterval(() => {
+      toggleNudge();
+    }, showNudge ? NUDGE_SHOW_DURATION : NUDGE_HIDE_DURATION);
+
+    return () => clearInterval(interval);
+  }, [showNudge, nudgeDisabled]);
+
+  const handleDuckClick = () => {
+    setNudgeDisabled(true);
+    setShowNudge(false);
+    window.open(CHROME_EXTENSION_URL, "_blank", "noopener,noreferrer");
+  };
+
+  // Calculate nudge position based on which edge the duck is on
+  const getNudgeStyle = () => {
+    const offset = duckSize / 2 + 12;
+    
+    if (rotation === 0) {
+      // Bottom edge - show above
+      return { left: position.x, top: position.y - offset, transform: "translateX(-50%)" };
+    } else if (rotation === -90) {
+      // Right edge - show to the left
+      return { left: position.x - offset, top: position.y, transform: "translateY(-50%)" };
+    } else if (rotation === 180) {
+      // Top edge - show below
+      return { left: position.x, top: position.y + offset, transform: "translateX(-50%)" };
+    } else {
+      // Left edge - show to the right
+      return { left: position.x + offset, top: position.y, transform: "translateY(-50%)" };
+    }
+  };
 
   return (
     <>
+      {/* Pixelated Nudge */}
+      {showNudge && (
+        <div
+          className="fixed z-[10000] pointer-events-none select-none"
+          style={getNudgeStyle()}
+        >
+          <div
+            className="animate-bounce"
+            style={{
+              fontFamily: '"Press Start 2P", "Courier New", monospace',
+              fontSize: isMobile ? "8px" : "10px",
+              color: "#fbbf24",
+              textShadow: `
+                2px 0 0 #78350f,
+                -2px 0 0 #78350f,
+                0 2px 0 #78350f,
+                0 -2px 0 #78350f,
+                1px 1px 0 #78350f,
+                -1px -1px 0 #78350f,
+                1px -1px 0 #78350f,
+                -1px 1px 0 #78350f
+              `,
+              letterSpacing: "1px",
+              whiteSpace: "nowrap",
+              imageRendering: "pixelated",
+            }}
+          >
+            {isMobile ? "▼ TAP ME! ▼" : "▼ CLICK ME! ▼"}
+          </div>
+        </div>
+      )}
+
       {/* Duck */}
       <div
         className="fixed z-[9999] cursor-pointer"
@@ -153,6 +199,7 @@ export default function RoamingDuck() {
           transition: "transform 0.1s linear",
         }}
         onClick={handleDuckClick}
+        title="Get Chrome Extension"
       >
         <Image
           src={duckGif}
@@ -164,57 +211,6 @@ export default function RoamingDuck() {
           priority
         />
       </div>
-
-      {/* Settings Menu */}
-      {menuOpen && (
-        <div
-          className="fixed z-[10000] bg-zinc-900/95 backdrop-blur-sm border border-zinc-700 rounded-xl p-4 shadow-2xl"
-          style={{
-            left: Math.min(position.x + duckSize / 2 + 10, window.innerWidth - 220),
-            top: Math.min(position.y - 60, window.innerHeight - 180),
-          }}
-          onClick={(e) => e.stopPropagation()}
-        >
-          <div className="text-yellow-400 font-bold text-sm mb-3 flex items-center gap-2">
-            🦆 Duck Settings
-          </div>
-
-          {/* Size Input */}
-          <div className="mb-3">
-            <label className="text-zinc-400 text-xs block mb-1">
-              Size (px)
-            </label>
-            <input
-              type="number"
-              min="20"
-              max="1000"
-              value={sizeInput}
-              onChange={handleSizeChange}
-              className="w-full bg-zinc-800 border border-zinc-600 rounded-lg px-3 py-1.5 text-white text-sm focus:outline-none focus:border-yellow-500 transition-colors"
-              placeholder="20-1000"
-            />
-          </div>
-
-          {/* Speed Slider */}
-          <div>
-            <label className="text-zinc-400 text-xs block mb-1">
-              Speed: {speed} px/s
-            </label>
-            <input
-              type="range"
-              min="20"
-              max="300"
-              value={speed}
-              onChange={handleSpeedChange}
-              className="w-full h-2 bg-zinc-700 rounded-lg appearance-none cursor-pointer accent-yellow-500"
-            />
-            <div className="flex justify-between text-[10px] text-zinc-500 mt-0.5">
-              <span>🐢 Slow</span>
-              <span>Fast 🚀</span>
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 }
