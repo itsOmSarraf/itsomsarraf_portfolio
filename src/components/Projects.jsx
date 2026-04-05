@@ -45,7 +45,7 @@ export default function ProjectsPage() {
 									width={700}
 									height={440}
 									alt={p.name}
-									className={`w-full h-auto object-cover transition-all duration-500 group-hover:scale-[1.03] ${isBrutalist ? 'grayscale group-hover:grayscale-0' : ''}`}
+									className={`w-full h-auto object-cover transition-all duration-500 group-hover:scale-[1.03] ${isBrutalist ? 'md:grayscale md:group-hover:grayscale-0' : ''}`}
 									unoptimized
 								/>
 							</a>

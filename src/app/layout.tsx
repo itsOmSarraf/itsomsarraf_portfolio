@@ -3,7 +3,7 @@ import './globals.css'
 import CustomCursor from "@/components/CustomeCursor";
 import RoamingDuck from "@/components/RoamingDuck";
 import { ThemeProvider } from "@/context/ThemeContext";
-import ThemeSwitcher from "@/components/ThemeSwitcher";
+// import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 export const metadata: Metadata = {
   title: "Om Sarraf | FullStack Developer",

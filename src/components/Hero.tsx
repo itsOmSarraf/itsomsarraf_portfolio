@@ -46,7 +46,7 @@ function BrutalistHero() {
                                 <div className="w-full aspect-[3/4] max-w-[220px] ml-auto overflow-hidden border-[3px]"
                                     style={{ borderColor: 'var(--text-primary)' }}>
                                     <Image src={OmSarraf} alt="Om Sarraf" width={300} height={400}
-                                        className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-100" priority />
+                                        className="object-cover w-full h-full md:grayscale md:hover:grayscale-0 transition-all duration-100" priority />
                                 </div>
                             </div>
                         </div>
@@ -96,7 +96,7 @@ function BrutalistHero() {
                             <div className="w-full aspect-square overflow-hidden border-[4px]"
                                 style={{ borderColor: 'var(--text-primary)' }}>
                                 <Image src={OmSarraf} alt="Om Sarraf" width={500} height={500}
-                                    className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-100" priority />
+                                    className="object-cover w-full h-full md:grayscale md:hover:grayscale-0 transition-all duration-100" priority />
                             </div>
                         </div>
                     </div>

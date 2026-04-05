@@ -10,17 +10,11 @@ const DEFAULT_SPEED = 110;
 
 const CHROME_EXTENSION_URL = "https://chromewebstore.google.com/detail/chrome-pets-pets-for-your/ifeomenedhoncedpchjfjcencnmnonen";
 
-// Nudge timing (in ms)
-const NUDGE_SHOW_DURATION = 1500;  // Show for 1.5 seconds
-const NUDGE_HIDE_DURATION = 10000; // Hide for 10 seconds
 
 export default function RoamingDuck() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [rotation, setRotation] = useState(0);
   const [duckSize, setDuckSize] = useState(DUCK_SIZE_DESKTOP);
-  const [isMobile, setIsMobile] = useState(false);
-  const [showNudge, setShowNudge] = useState(true);
-  const [nudgeDisabled, setNudgeDisabled] = useState(false);
   
   const progressRef = useRef(0);
   const animationRef = useRef<number | null>(null);
@@ -41,11 +35,8 @@ export default function RoamingDuck() {
       const width = window.innerWidth;
       const height = window.innerHeight;
       
-      // Check if mobile
       const mobile = width < 768;
-      setIsMobile(mobile);
 
-      // Use responsive default size
       const currentSize = mobile ? DUCK_SIZE_MOBILE : DUCK_SIZE_DESKTOP;
       setDuckSize(currentSize);
 
@@ -111,45 +102,8 @@ export default function RoamingDuck() {
     };
   }, []);
 
-  // Periodic nudge toggle
-  useEffect(() => {
-    if (nudgeDisabled) return;
-
-    const toggleNudge = () => {
-      setShowNudge((prev) => !prev);
-    };
-
-    // Initial show, then toggle periodically
-    const interval = setInterval(() => {
-      toggleNudge();
-    }, showNudge ? NUDGE_SHOW_DURATION : NUDGE_HIDE_DURATION);
-
-    return () => clearInterval(interval);
-  }, [showNudge, nudgeDisabled]);
-
   const handleDuckClick = () => {
-    setNudgeDisabled(true);
-    setShowNudge(false);
     window.open(CHROME_EXTENSION_URL, "_blank", "noopener,noreferrer");
-  };
-
-  // Calculate nudge position based on which edge the duck is on
-  const getNudgeStyle = () => {
-    const offset = duckSize / 2 + 12;
-    
-    if (rotation === 0) {
-      // Bottom edge - show above
-      return { left: position.x, top: position.y - offset, transform: "translateX(-50%)" };
-    } else if (rotation === -90) {
-      // Right edge - show to the left
-      return { left: position.x - offset, top: position.y, transform: "translateY(-50%)" };
-    } else if (rotation === 180) {
-      // Top edge - show below
-      return { left: position.x, top: position.y + offset, transform: "translateX(-50%)" };
-    } else {
-      // Left edge - show to the right
-      return { left: position.x + offset, top: position.y, transform: "translateY(-50%)" };
-    }
   };
 
   return (
