@@ -7,27 +7,13 @@ import { FiExternalLink } from 'react-icons/fi';
 import { dummyProjects } from '@/lib/projects';
 import { motion } from 'framer-motion';
 import { useTheme } from '@/context/ThemeContext';
-import { useGrayscaleReveal } from '@/hooks/useGrayscaleReveal';
-
 function ProjectImage({ src, alt, isBrutalist }) {
-	const { ref, colored } = useGrayscaleReveal();
-
-	if (!isBrutalist) {
-		return (
-			<Image src={src} width={700} height={440} alt={alt}
-				className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-				unoptimized />
-		);
-	}
-
 	return (
-		<div ref={ref}>
-			<Image src={src} width={700} height={440} alt={alt}
-				className={`w-full h-auto object-cover transition-transform md:transition-all duration-500 group-hover:scale-[1.03] ${
-					colored ? 'grayscale-0' : 'grayscale'
-				} md:group-hover:grayscale-0`}
-				unoptimized />
-		</div>
+		<Image src={src} width={700} height={440} alt={alt}
+			className={`w-full h-auto object-cover transition-all duration-500 group-hover:scale-[1.03] ${
+				isBrutalist ? 'md:grayscale md:group-hover:grayscale-0' : ''
+			}`}
+			unoptimized />
 	);
 }
 

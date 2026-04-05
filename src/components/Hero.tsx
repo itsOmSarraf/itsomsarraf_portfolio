@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { GoArrowDownLeft } from "react-icons/go";
 import { BsTwitterX, BsLinkedin, BsGithub, BsInstagram } from "react-icons/bs";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
-import { useGrayscaleReveal } from "@/hooks/useGrayscaleReveal";
 
 const socials = [
     { href: 'https://github.com/itsomsarraf', Icon: BsGithub, label: 'GitHub' },
@@ -20,8 +19,6 @@ const socials = [
    BRUTALIST — massive type, marquee, raw square photo
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 function BrutalistHero() {
-    const { ref: heroImgRef, colored: mobileColored } = useGrayscaleReveal();
-
     return (
         <section className="relative w-full min-h-screen flex flex-col" style={{ background: 'var(--bg-primary)' }}>
             <div className="overflow-hidden py-3 border-b-[3px]" style={{ borderColor: 'var(--border-color)' }}>
@@ -45,10 +42,10 @@ function BrutalistHero() {
                                 OM<br />SARRAF
                             </h1>
                             <div className="flex-1 ml-auto">
-                                <div ref={heroImgRef} className="w-full aspect-[3/4] max-w-[220px] ml-auto overflow-hidden border-[3px]"
+                                <div className="w-full aspect-[3/4] max-w-[220px] ml-auto overflow-hidden border-[3px]"
                                     style={{ borderColor: 'var(--text-primary)' }}>
                                     <Image src={OmSarraf} alt="Om Sarraf" width={300} height={400}
-                                        className={`object-cover w-full h-full ${mobileColored ? 'grayscale-0' : 'grayscale'}`}
+                                        className="object-cover w-full h-full"
                                         priority />
                                 </div>
                             </div>
