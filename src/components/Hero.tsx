@@ -6,6 +6,7 @@ import { useTheme } from "@/context/ThemeContext";
 import { motion, AnimatePresence } from "framer-motion";
 import { GoArrowDownLeft } from "react-icons/go";
 import { BsTwitterX, BsLinkedin, BsGithub, BsInstagram } from "react-icons/bs";
+import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 const socials = [
     { href: 'https://in.linkedin.com/in/itsomsarraf', Icon: BsLinkedin, label: 'LinkedIn' },
@@ -32,34 +33,56 @@ function BrutalistHero() {
                 </motion.div>
             </div>
             <div className="flex-1 flex items-center">
-                <div className="max-w-6xl mx-auto px-6 sm:px-10 w-full py-12">
-                    <div className="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-12">
-                        <div className="w-full md:w-2/3">
-                            <div className="flex items-center justify-between md:block">
-                                <h1 className="font-heading text-[4rem] sm:text-[7rem] md:text-[9rem] leading-[0.85] mb-0 md:mb-8 uppercase"
-                                    style={{ color: 'var(--text-primary)' }}>
-                                    OM<br />SARRAF
-                                </h1>
-                                <div className="block md:hidden flex-shrink-0">
-                                    <div className="h-24 w-24 overflow-hidden rotate-2 border-[3px]"
-                                        style={{ borderColor: 'var(--text-primary)' }}>
-                                        <Image src={OmSarraf} alt="Om Sarraf" width={96} height={96}
-                                            className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-100" priority />
-                                    </div>
+                <div className="max-w-6xl mx-auto px-6 sm:px-10 w-full py-8 md:py-12">
+                    {/* Mobile: name + big image side by side */}
+                    {/* Mobile: name + big image side by side */}
+                    <div className="relative mb-3 md:hidden">
+                        <div className="flex items-end gap-4">
+                            <h1 className="font-heading text-[4rem] leading-[0.85] uppercase flex-shrink-0"
+                                style={{ color: 'var(--text-primary)' }}>
+                                OM<br />SARRAF
+                            </h1>
+                            <div className="flex-1 ml-auto">
+                                <div className="w-full aspect-[3/4] max-w-[220px] ml-auto overflow-hidden border-[3px]"
+                                    style={{ borderColor: 'var(--text-primary)' }}>
+                                    <Image src={OmSarraf} alt="Om Sarraf" width={300} height={400}
+                                        className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-100" priority />
                                 </div>
                             </div>
-                            <div className="mb-8 mt-6 md:mt-0 pl-5 border-l-4" style={{ borderColor: 'var(--accent-1)' }}>
-                                <p className="font-body text-sm md:text-base leading-relaxed max-w-md"
-                                    style={{ color: 'var(--text-secondary)' }}>
-                                    Shipping products that matter — from web &amp; mobile apps to AI agents &amp; automation. Worked with clients across the globe.
-                                </p>
-                            </div>
+                        </div>
+                    </div>
+
+                    {/* Desktop: two-column layout with text content inside left column */}
+                    <div className="hidden md:flex items-start justify-between gap-12">
+                        <div className="w-3/5">
+                            <h1 className="font-heading text-[9rem] leading-[0.85] mb-6 uppercase"
+                                style={{ color: 'var(--text-primary)' }}>
+                                OM<br />SARRAF
+                            </h1>
+                            <RoughNotationGroup show={true}>
+                                <div className="mb-5 pl-5 border-l-4" style={{ borderColor: 'var(--accent-1)' }}>
+                                    <p className="font-body text-base leading-relaxed max-w-md"
+                                        style={{ color: 'var(--text-secondary)' }}>
+                                        Shipping{' '}
+                                        <RoughNotation type="highlight" color="#FFEB00" multiline={true}>
+                                            products that matter
+                                        </RoughNotation>
+                                        {' '}— from <span className="font-bold">web &amp; mobile apps</span> to{' '}
+                                        <span className="font-bold">AI agents &amp; automation</span>.
+                                        {' '}Worked with{' '}
+                                        <span className="font-bold">clients</span>{' '}
+                                        <RoughNotation type="underline" color="#B8001F">
+                                            across the globe
+                                        </RoughNotation>.
+                                    </p>
+                                </div>
+                            </RoughNotationGroup>
                             <a href="mailto:itsomsarraf@gmail.com"
                                 className="inline-block font-body text-sm font-bold uppercase tracking-wider px-6 py-3 border-[3px] transition-colors duration-75 hover:bg-[--accent-1] hover:!text-white hover:border-[--accent-1]"
                                 style={{ borderColor: 'var(--text-primary)', color: 'var(--text-primary)' }}>
                                 LET&apos;S TALK &rarr;
                             </a>
-                            <div className="flex gap-6 mt-8 flex-wrap">
+                            <div className="flex gap-6 mt-6 flex-wrap">
                                 {socials.map(({ href, label }) => (
                                     <a key={label} href={href} target="_blank" rel="noopener noreferrer"
                                         className="font-body text-xs uppercase tracking-widest font-bold border-b-[3px] pb-1 hover:border-[--accent-1] transition-colors duration-75"
@@ -69,12 +92,48 @@ function BrutalistHero() {
                                 ))}
                             </div>
                         </div>
-                        <div className="hidden md:flex w-full md:w-1/3 justify-center md:justify-end mt-4 md:mt-0">
-                            <div className="h-64 w-64 overflow-hidden rotate-2 border-[4px]"
+                        <div className="w-2/5 flex justify-end">
+                            <div className="w-full aspect-square overflow-hidden border-[4px]"
                                 style={{ borderColor: 'var(--text-primary)' }}>
-                                <Image src={OmSarraf} alt="Om Sarraf" width={256} height={256}
+                                <Image src={OmSarraf} alt="Om Sarraf" width={500} height={500}
                                     className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-100" priority />
                             </div>
+                        </div>
+                    </div>
+
+                    {/* Mobile-only text content */}
+                    <div className="md:hidden">
+                        <RoughNotationGroup show={true}>
+                            <div className="mb-5 pl-5 border-l-4" style={{ borderColor: 'var(--accent-1)' }}>
+                                <p className="font-body text-sm leading-relaxed max-w-md"
+                                    style={{ color: 'var(--text-secondary)' }}>
+                                    Shipping{' '}
+                                    <RoughNotation type="highlight" color="#FFEB00" multiline={true}>
+                                        products that matter
+                                    </RoughNotation>
+                                    {' '}— from <span className="font-bold">web &amp; mobile apps</span> to{' '}
+                                    <span className="font-bold">AI agents &amp; automation</span>.
+                                    {' '}Worked with{' '}
+                                    <span className="font-bold">clients</span>{' '}
+                                    <RoughNotation type="underline" color="#B8001F">
+                                        across the globe
+                                    </RoughNotation>.
+                                </p>
+                            </div>
+                        </RoughNotationGroup>
+                        <a href="mailto:itsomsarraf@gmail.com"
+                            className="inline-block font-body text-sm font-bold uppercase tracking-wider px-6 py-3 border-[3px] transition-colors duration-75 hover:bg-[--accent-1] hover:!text-white hover:border-[--accent-1]"
+                            style={{ borderColor: 'var(--text-primary)', color: 'var(--text-primary)' }}>
+                            LET&apos;S TALK &rarr;
+                        </a>
+                        <div className="flex gap-6 mt-6 flex-wrap">
+                            {socials.map(({ href, label }) => (
+                                <a key={label} href={href} target="_blank" rel="noopener noreferrer"
+                                    className="font-body text-xs uppercase tracking-widest font-bold border-b-[3px] pb-1 hover:border-[--accent-1] transition-colors duration-75"
+                                    style={{ borderColor: 'var(--text-primary)', color: 'var(--text-primary)' }}>
+                                    {label}
+                                </a>
+                            ))}
                         </div>
                     </div>
                 </div>

@@ -13,18 +13,14 @@
 
 ## Work Experience
 
-### Full Stack Intern — Sarvam.ai
-- Period: June 2025 – Present
-- Location: Bangalore, India · Remote
-- Working on the Agents Platform
-- URL: https://sarvam.ai/
-
-### Contract Full Stack Engineer — Cracked Devs
-- Period: Feb 2025 – April 2025
+### Founding Engineer — FOF.link
+- Period: March 2024 – May 2024
 - Location: Remote
-- Shipping consumer-facing mobile apps
-- Stack: React Native, Supabase
-- URL: https://crackeddevs.com/
+- Led end-to-end development of the FOF.link platform as a solo engineer
+- Architected and implemented a full-stack solution using Next.js and Neo4j
+- Integrated authentication and user management using Clerk
+- Stack: Next.js, Neo4j, Clerk, TypeScript, Tailwind
+- URL: https://fof.link
 
 ### Full Stack Intern — Stealth Startup
 - Period: May 2024 – August 2024
@@ -35,14 +31,29 @@
 - Stack: Next.js, Django, Framer Motion, Zustand, React, Tailwind
 - URL: https://vexio.in
 
-### Founding Engineer — FOF.link
-- Period: April 2024 – June 2024
+### Freelance Full Stack Developer
+- Period: Oct 2024 – Feb 2025
 - Location: Remote
-- Led end-to-end development of the FOF.link platform as a solo engineer
-- Architected and implemented a full-stack solution using Next.js and Neo4j
-- Integrated authentication and user management using Clerk
-- Stack: Next.js, Neo4j, Clerk, TypeScript, Tailwind
-- URL: https://fof.link
+- Worked with clients across the globe delivering end-to-end web and mobile solutions
+- Products ranged from Web3, SaaS, to e-commerce and agentic automations
+- Stack: Next.js, React Native, TailwindCSS, TypeScript, Supabase
+
+### Contract Full Stack Engineer — Cracked Devs
+- Period: Feb 2025 – April 2025
+- Location: Remote
+- Shipped consumer facing mobile apps for this app studio
+- Also contributed to some web3 projects
+- Stack: React Native, Supabase
+- URL: https://crackeddevs.com/
+
+### Full Stack Intern — sarvam.ai
+- Period: June 2025 – Present
+- Location: Bangalore, India
+- Shipping production features for Samvaad, Sarvam's enterprise voice AI platform
+- Built embeddable voice agent, contributed to the website and random POCs for client demos
+- Owning end-to-end frontend and backend delivery for billing, Slack alerts, and campaign analytics
+- Stack: Next.js, React, TypeScript, Node.js, PostgreSQL, Playwright, Cloud Build (GCP), Mixpanel, Flagsmith, Lago, Slack SDK, Framer Motion, Vercel, GitHub Actions
+- URL: https://sarvam.ai/
 
 ## Projects
 
@@ -92,9 +103,10 @@
 ## Skills & Technologies
 
 - Frontend: React, Next.js, React Native, TailwindCSS, Shadcn, ThreeJS, Framer Motion
-- Backend: Django, FastAPI, Supabase, Neo4j
+- Backend: Node.js, Django, FastAPI, Supabase, Neo4j, PostgreSQL
 - AI/ML: Llama, Gemini, GenAI
-- Tools: TypeScript, Zustand, Clerk, Plasmo, FFmpeg
+- Tools: TypeScript, Zustand, Clerk, Plasmo, FFmpeg, Playwright, Mixpanel, Flagsmith
+- Infra: Vercel, GCP Cloud Build, GitHub Actions
 - Other: Chrome Extensions, CMS Integration, Mobile Apps (iOS/Android)
 
 ## Optional
