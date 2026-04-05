@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import './globals.css'
 import CustomCursor from "@/components/CustomeCursor";
 import RoamingDuck from "@/components/RoamingDuck";
+import { ThemeProvider } from "@/context/ThemeContext";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 export const metadata: Metadata = {
   title: "Om Sarraf | FullStack Developer",
@@ -26,13 +28,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`antialiased bg-gradient-to-b from-transparent to-background`}
-      >
-        {children}
-        <CustomCursor />
-        <RoamingDuck />
+    <html lang="en" data-theme="brutalist" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var t=localStorage.getItem('portfolio-theme');if(t&&['brutalist','editorial','neon','luxury'].indexOf(t)!==-1){document.documentElement.setAttribute('data-theme',t)}})();`,
+          }}
+        />
+      </head>
+      <body className="antialiased font-body relative">
+        <ThemeProvider>
+          <div className="relative z-10">
+            {children}
+          </div>
+          <ThemeSwitcher />
+          <CustomCursor />
+          <RoamingDuck />
+        </ThemeProvider>
       </body>
     </html>
   );

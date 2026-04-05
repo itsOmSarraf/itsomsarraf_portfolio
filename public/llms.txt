@@ -1,0 +1,104 @@
+# Om Sarraf
+
+> FullStack Developer — shipping products that matter across web, mobile, AI agents, and automation. Worked with clients across the globe.
+
+## Contact
+
+- Email: itsomsarraf@gmail.com
+- LinkedIn: https://in.linkedin.com/in/itsomsarraf
+- X / Twitter: https://x.com/itsOmSarraf_
+- GitHub: https://github.com/itsomsarraf
+- Instagram: https://instagram.com/itsomsarraf
+- Resume: https://drive.google.com/file/d/1bmrHuYXWg1XsBgdFQjAMvHhjphsC0kKp/view?usp=sharing
+
+## Work Experience
+
+### Full Stack Intern — Sarvam.ai
+- Period: June 2025 – Present
+- Location: Bangalore, India · Remote
+- Working on the Agents Platform
+- URL: https://sarvam.ai/
+
+### Contract Full Stack Engineer — Cracked Devs
+- Period: Feb 2025 – April 2025
+- Location: Remote
+- Shipping consumer-facing mobile apps
+- Stack: React Native, Supabase
+- URL: https://crackeddevs.com/
+
+### Full Stack Intern — Stealth Startup
+- Period: May 2024 – August 2024
+- Location: Remote
+- Contributed to GenAI MVP development with a small engineering team
+- Built full-stack features using Next.js frontend and Django backend
+- Implemented state management with Zustand and animations using Framer Motion
+- Stack: Next.js, Django, Framer Motion, Zustand, React, Tailwind
+- URL: https://vexio.in
+
+### Founding Engineer — FOF.link
+- Period: April 2024 – June 2024
+- Location: Remote
+- Led end-to-end development of the FOF.link platform as a solo engineer
+- Architected and implemented a full-stack solution using Next.js and Neo4j
+- Integrated authentication and user management using Clerk
+- Stack: Next.js, Neo4j, Clerk, TypeScript, Tailwind
+- URL: https://fof.link
+
+## Projects
+
+### Subly — Create Subliminals
+- Description: An affirmations app that allows you to create your own subliminal messages and play them on your device. Acquired 1400+ users.
+- Stack: ReactNative, Supabase, FastAPI, FFmpeg
+- App Store: https://apps.apple.com/us/app/subly-create-subliminals/id6741949047
+
+### TopNode
+- Description: Developed complete frontend for a Japan-based Web3 company as per their requirements.
+- Stack: Next.js, TailwindCSS
+- Live: https://topnode.app
+
+### Volnex
+- Description: Developed complete frontend with animations and pixel-perfect design for a Dubai-based forex company. Achieved 95+ Lighthouse score with CMS integration.
+- Stack: Next.js, TailwindCSS, Shadcn, CMS
+- Live: https://volnex.com
+
+### Gamerge.ai
+- Description: Enhanced platform with ThreeJS animations and redesign for a Dubai-based Web3 company, creating an immersive user experience.
+- Stack: Next.js, ThreeJS, TailwindCSS, Shadcn
+- Live: https://gamerge.ai
+
+### Dishcovery
+- Description: AI-powered kitchen companion that turns your ingredients into personalized recipe suggestions. Snap, share preferences, and discover your next meal.
+- Stack: Next.js, Llama, Zustand, Shadcn, Tailwind
+- GitHub: https://github.com/itsomsarraf/dishcovery-nextjs
+- Live: https://dishcovery-nextjs.vercel.app
+
+### Surveyor
+- Description: Smart survey platform that generates AI-powered responses. Create surveys and get instant, realistic feedback for testing and prototyping.
+- Stack: Next.js, Gemini, Zustand, Shadcn, Tailwind
+- Live: https://surveyor.one
+
+### ChatMark
+- Description: Chrome extension to organize and tag your AI chat conversations from ChatGPT, Claude, Gemini, and Mistral in one central hub.
+- Stack: Plasmo, React, Tailwind
+- GitHub: https://github.com/itsOmSarraf/chatmark
+- Chrome Web Store: https://chromewebstore.google.com/detail/chatmark/ijghhkhojebllacdnpibmjodkgdfpnhm
+
+### COVID Retweet Bot
+- Description: Emergency response Twitter bot that amplified over 800+ verified COVID-19 healthcare essentials tweets during the pandemic crisis. Successfully served its purpose and was retired as resource demands decreased.
+- Stack: Tweepy API, Python
+- GitHub: https://github.com/itsomsarraf/COVID_RETWEET
+- Twitter: https://x.com/covid_retweet
+
+## Skills & Technologies
+
+- Frontend: React, Next.js, React Native, TailwindCSS, Shadcn, ThreeJS, Framer Motion
+- Backend: Django, FastAPI, Supabase, Neo4j
+- AI/ML: Llama, Gemini, GenAI
+- Tools: TypeScript, Zustand, Clerk, Plasmo, FFmpeg
+- Other: Chrome Extensions, CMS Integration, Mobile Apps (iOS/Android)
+
+## Optional
+
+- Location: India
+- Available for: Freelance, Contract, Full-time
+- Preferred contact: itsomsarraf@gmail.com

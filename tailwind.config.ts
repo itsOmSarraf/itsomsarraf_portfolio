@@ -8,10 +8,19 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			fontFamily: {
+				heading: ['var(--font-heading)'],
+				body: ['var(--font-body)'],
+			},
+			borderRadius: {
+				theme: 'var(--radius)',
+				'theme-sm': 'var(--radius-sm)',
+				'theme-pill': 'var(--radius-pill)',
+			},
 			colors: {
 				background: 'var(--background)',
-				foreground: 'var(--foreground)'
-			}
+				foreground: 'var(--foreground)',
+			},
 		}
 	},
 	plugins: []

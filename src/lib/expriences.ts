@@ -1,25 +1,18 @@
 export const experiences = [
 	{
-		title: 'Full Stack Intern',
-		company: 'Sarvam.ai',
-		location: 'Bangalore, India · Remote',
-		duration: 'June 2025 – Present',
-		Sdate: '2025-06-01',
-		Edate: 'Present',
-		description: ['Working on Agents Platform, more updates soon'],
-		url: 'https://sarvam.ai/',
-		stack: []
-	},
-	{
-		title: 'Contract Full Stack Engineer',
-		company: 'Cracked Devs',
+		title: 'Founding Engineer',
+		company: 'FOF.link',
 		location: 'Remote',
-		duration: 'Feb 2025 - April 2025',
-		Sdate: '2025-02-26',
-		Edate: '2025-04-30',
-		description: ['Shipping consumer facing mobile apps'],
-		url: 'https://crackeddevs.com/',
-		stack: ['React Native', 'Supabase']
+		duration: 'March 2024 - May 2024',
+		Sdate: '2024-04',
+		Edate: '2024-06',
+		description: [
+			'Led end-to-end development of the FOF.link platform as a solo engineer',
+			'Architected and implemented a full-stack solution using Next.js and Neo4j',
+			'Integrated authentication and user management using Clerk'
+		],
+		url: 'https://fof.link',
+		stack: ['Next.js', 'Neo4j', 'Clerk', 'TypeScript', 'Tailwind']
 	},
 	{
 		title: 'Full Stack Intern',
@@ -44,19 +37,47 @@ export const experiences = [
 		]
 	},
 	{
-		title: 'Founding Engineer',
-		company: 'FOF.link',
+		title: 'Freelance Full Stack Developer',
+		company: 'Freelancer',
 		location: 'Remote',
-		duration: 'April 2024 - June 2024',
-		Sdate: '2024-04',
+		duration: 'Oct 2024 - Feb 2025',
+		Sdate: '2024-10-01',
+		Edate: '2025-02-01',
+		description: [
+			'Worked with clients across the globe delivering end-to-end web and mobile solutions',
+			'Products ranged from Web3, SaaS, to e-commerce and agentic automations'
+		],
+		url: '#',
+		stack: ['Next.js', 'React Native', 'TailwindCSS', 'TypeScript', 'Supabase']
+	},
+	{
+		title: 'Contract Full Stack Engineer',
+		company: 'Cracked Devs',
+		location: 'Remote',
+		duration: 'Feb 2025 - April 2025',
+		Sdate: '2025-02-26',
+		Edate: '2025-04-30',
+		description: [
+			'Shipped consumer facing mobile apps for this app studio',
+			'Also contributed to some web3 projects'
+		],
+		url: 'https://crackeddevs.com/',
+		stack: ['React Native', 'Supabase']
+	},
+	{
+		title: 'Full Stack Intern',
+		company: 'sarvam.ai',
+		location: 'Bangalore, India',
+		duration: 'June 2025 – Present',
+		Sdate: '2025-06-01',
 		Edate: 'Present',
 		description: [
-			'Led end-to-end development of the FOF.link platform as a solo engineer',
-			'Architected and implemented a full-stack solution using Next.js and Neo4j',
-			'Integrated authentication and user management using Clerk'
+			'Shipping production features for Samvaad, Sarvam\'s enterprise voice AI platform',
+			'Built embeddable voice agent, contributed to the website and random POCs for client demos',
+			'Owning end-to-end frontend and backend delivery for billing, Slack alerts, and campaign analytics, etc'
 		],
-		url: 'https://fof.link',
-		stack: ['Next.js', 'Neo4j', 'Clerk', 'TypeScript', 'Tailwind']
+		url: 'https://sarvam.ai/',
+		stack: ['Next.js', 'React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Playwright', 'Cloud Build (GCP)', 'Mixpanel', 'Flagsmith', 'Lago', 'Slack SDK', 'Framer Motion', 'Vercel', 'GitHub Actions']
 	}
 	// {
 	// 	title: 'GDSC Lead',

@@ -1,105 +1,158 @@
 'use client';
-import React, { useState } from 'react';
+
+import React, { useRef, useEffect } from 'react';
 import { experiences } from '@/lib/expriences';
-import { RiArrowDropRightFill } from 'react-icons/ri';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const ExperienceItem = ({
-	title,
-	company,
-	location,
-	duration,
-	description,
-	url,
-	stack
-}) => (
-	<div className='mb-8 bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300'>
-		<h3 className='text-xl font-semibold text-gray-800 mb-2'>{title}</h3>
-		<h4 className='text-lg font-medium text-gray-700 mb-1'>
-			<a
-				href={url}
-				target='_blank'
-				rel='noopener noreferrer'
-				className='hover:text-blue-600 transition-colors duration-200'>
-				{company}
-			</a>
-			{location && ` - ${location}`}
-		</h4>
-		<p className='text-sm text-gray-600 mb-4'>{duration}</p>
-		<ul className='list-none pl-0 mb-6 space-y-3'>
-			{description.map((item, index) => (
-				<li
-					key={index}
-					className='flex'>
-					<RiArrowDropRightFill className='text-blue-500 fill-blue-500 text-3xl flex-shrink-0' />
-					<span className='flex items-center text-gray-600 group-hover:text-gray-800 transition-colors duration-200'>
-						{item}
-					</span>
-				</li>
-			))}
-		</ul>
-		{stack && stack.length > 0 && (
-			<div>
-				<h5 className='text-sm font-semibold text-gray-700 mb-3'>Tech Stack</h5>
-				<div className='flex flex-wrap gap-2'>
-					{stack.map((tech, index) => (
-						<span
-							key={index}
-							className='bg-gray-100 text-gray-700 text-xs px-3 py-1.5 rounded-full hover:bg-gray-200 transition-colors duration-200'>
-							{tech}
-						</span>
-					))}
-				</div>
-			</div>
-		)}
-	</div>
-);
+gsap.registerPlugin(ScrollTrigger);
 
-const Experiences = () => {
-	const [selectedCompany, setSelectedCompany] = useState(
-		experiences[0].company
-	);
+const PEEK = 18;
+
+export default function Experiences() {
+	const containerRef = useRef(null);
+	const innerRef = useRef(null);
+	const deckRef = useRef(null);
+
+	useEffect(() => {
+		const ctx = gsap.context(() => {
+			const total = experiences.length;
+			const cards = deckRef.current.querySelectorAll('.exp-card');
+			let maxHeight = 0;
+			cards.forEach((card) => {
+				if (card.offsetHeight > maxHeight) maxHeight = card.offsetHeight;
+			});
+			cards.forEach((card) => {
+				card.style.height = `${maxHeight}px`;
+			});
+			deckRef.current.style.height = `${maxHeight}px`;
+			const deckHeight = maxHeight;
+
+			gsap.set(cards[0], { zIndex: 1 });
+
+			for (let i = 1; i < total; i++) {
+				gsap.set(cards[i], {
+					y: deckHeight + 100,
+					zIndex: i + 1,
+				});
+			}
+
+			const dur = 0.6;
+
+			const tl = gsap.timeline({
+				scrollTrigger: {
+					trigger: containerRef.current,
+					start: 'center center',
+					end: `+=${(total - 1) * 50}%`,
+					pin: innerRef.current,
+					pinSpacing: true,
+					scrub: true,
+					anticipatePin: 1,
+				},
+			});
+
+			for (let i = 1; i < total; i++) {
+				const t = (i - 1) * dur;
+				tl.to(cards[i], {
+					y: i * PEEK,
+					duration: dur,
+					ease: 'none',
+				}, t);
+			}
+		}, containerRef);
+
+		return () => ctx.revert();
+	}, []);
 
 	return (
-		<div className='bg-gray-50 py-12 md:py-20'>
-			<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
-				<h2 className='text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-gray-800 text-center'>
+		<section
+			ref={containerRef}
+			className="relative"
+			style={{ background: 'var(--bg-secondary)' }}>
+			<div ref={innerRef} className="min-h-screen flex flex-col justify-center py-16 md:py-20">
+				<h2
+					className="font-heading text-3xl md:text-4xl font-bold text-center mb-12 md:mb-16"
+					style={{ color: 'var(--text-primary)' }}>
 					Work Experience
 				</h2>
-				<div className='flex flex-col md:flex-row-reverse gap-8'>
-					<div className='w-full md:w-3/4'>
-						{experiences.find((exp) => exp.company === selectedCompany) && (
-							<ExperienceItem
-								{...experiences.find((exp) => exp.company === selectedCompany)}
-							/>
-						)}
-					</div>
-					<div className='w-full md:w-1/4'>
-						<div className='sticky top-8'>
-							<ul className='list-none pl-0 md:border-l md:border-gray-300 space-y-1'>
-								{experiences.map((exp) => (
-									<li
-										key={exp.company}
-										className={`pl-4 py-3 cursor-pointer transition-all duration-200 hover:bg-gray-100 rounded-r ${
-											selectedCompany === exp.company
-												? 'text-blue-600 font-semibold border-l-2 border-blue-600 bg-blue-50 hover:bg-blue-50'
-												: 'text-gray-600 hover:text-gray-800'
-										}`}
-										onClick={() => setSelectedCompany(exp.company)}>
-										<div className='flex flex-col'>
-											<span className='text-sm font-medium'>{exp.title}</span>
-											<span className='text-xs mt-1 text-gray-500'>
-												{exp.duration}
-											</span>
+
+				<div
+					className="max-w-3xl mx-auto w-full px-6 sm:px-10 overflow-hidden"
+					style={{ paddingBottom: `${(experiences.length - 1) * PEEK + 8}px` }}>
+					<div ref={deckRef} className="relative">
+						{experiences.map((exp, i) => (
+							<div
+								key={exp.company}
+								className={`exp-card rounded-theme p-5 md:p-7 card-shadow ${i === 0 ? 'relative' : 'absolute inset-x-0 top-0'}`}
+								style={{
+									background: 'var(--card-bg)',
+									border: 'var(--card-border)',
+									willChange: 'transform',
+								}}>
+								<div className="flex items-start justify-between gap-4 mb-1">
+									<h3
+										className="font-heading text-lg md:text-xl font-bold leading-tight"
+										style={{ color: 'var(--text-primary)' }}>
+										{exp.title}
+									</h3>
+								<span
+										className="font-body text-xs whitespace-nowrap flex-shrink-0"
+										style={{ color: 'var(--text-primary)' }}>
+									{exp.duration}
+								</span>
+								</div>
+
+								<p className="font-body text-sm mb-3">
+									<a
+										href={exp.url}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="font-semibold hover:opacity-80 transition-opacity"
+										style={{ color: 'var(--accent-1)' }}>
+										{exp.company}
+									</a>
+									{exp.location && (
+										<span style={{ color: 'var(--text-muted)' }}>
+											{' '}· {exp.location}
+										</span>
+									)}
+								</p>
+
+								<div className="space-y-1.5 mb-4">
+									{exp.description.map((d, j) => (
+										<div
+											key={j}
+											className="flex gap-2.5 font-body text-sm leading-relaxed"
+											style={{ color: 'var(--text-secondary)' }}>
+											<span
+												className="flex-shrink-0 mt-[7px] w-1 h-1 rounded-full"
+												style={{ background: 'var(--accent-1)' }}
+											/>
+											{d}
 										</div>
-									</li>
-								))}
-							</ul>
-						</div>
+									))}
+								</div>
+
+								{/* {exp.stack?.length > 0 && (
+									<div className="flex flex-wrap gap-1.5">
+										{exp.stack.map((t, j) => (
+											<span
+												key={j}
+												className="font-body text-[11px] font-medium px-2.5 py-1 rounded-theme-pill"
+												style={{
+													background: 'var(--tag-bg)',
+													color: 'var(--tag-text)',
+												}}>
+												{t}
+											</span>
+										))}
+									</div>
+								)} */}
+							</div>
+						))}
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
-};
-
-export default Experiences;
+}

@@ -1,11 +1,268 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Orbitron:wght@400;500;700;900&family=Fira+Code:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Press+Start+2P&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Hide the native cursor */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    position: relative;
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background-color: var(--accent-1);
+    color: var(--bg-primary);
+  }
+}
+
+/* ========== THEME TRANSITIONS ========== */
+body,
+body *:not(img):not(svg):not(path):not(video):not(canvas) {
+  transition-property: background-color, color, border-color, box-shadow, opacity;
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ====================================================
+   THEME B — BRUTALIST
+   ==================================================== */
+[data-theme="brutalist"] {
+  --bg-primary: #f5f5f0;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #eaeae5;
+  --text-primary: #0a0a0a;
+  --text-secondary: #2a2a2a;
+  --text-muted: #5a5a5a;
+  --accent-1: #ff2200;
+  --accent-2: #0055ff;
+  --border-color: #0a0a0a;
+  --border-color-hover: #0a0a0a;
+  --card-bg: #ffffff;
+  --card-border: 3px solid #0a0a0a;
+  --font-heading: 'Bebas Neue', sans-serif;
+  --font-body: 'Space Mono', monospace;
+  --radius: 0px;
+  --radius-sm: 0px;
+  --radius-pill: 0px;
+  --tag-bg: #0a0a0a;
+  --tag-text: #f5f5f0;
+}
+
+/* ====================================================
+   THEME C — EDITORIAL
+   ==================================================== */
+[data-theme="editorial"] {
+  --bg-primary: #faf8f4;
+  --bg-secondary: #f2ede6;
+  --bg-tertiary: #e8e2d8;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-muted: #8a8a8a;
+  --accent-1: #b83a2a;
+  --accent-2: #1a3a5c;
+  --border-color: #d8cfc2;
+  --border-color-hover: #c0b5a5;
+  --card-bg: #ffffff;
+  --card-border: 1px solid #d8cfc2;
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'Source Serif 4', Georgia, serif;
+  --radius: 3px;
+  --radius-sm: 2px;
+  --radius-pill: 3px;
+  --tag-bg: #f2ede6;
+  --tag-text: #4a4a4a;
+}
+
+/* ====================================================
+   THEME D — NEON (Retro-Futuristic)
+   ==================================================== */
+[data-theme="neon"] {
+  --bg-primary: #08080f;
+  --bg-secondary: #0e0e1a;
+  --bg-tertiary: #161628;
+  --text-primary: #00ffa3;
+  --text-secondary: #80ffd1;
+  --text-muted: #337a5e;
+  --accent-1: #ff0080;
+  --accent-2: #00d4ff;
+  --border-color: rgba(0, 255, 163, 0.15);
+  --border-color-hover: rgba(0, 255, 163, 0.35);
+  --card-bg: rgba(14, 14, 26, 0.85);
+  --card-border: 1px solid rgba(0, 255, 163, 0.15);
+  --font-heading: 'Orbitron', sans-serif;
+  --font-body: 'Fira Code', monospace;
+  --radius: 2px;
+  --radius-sm: 1px;
+  --radius-pill: 2px;
+  --tag-bg: rgba(0, 255, 163, 0.08);
+  --tag-text: #00ffa3;
+}
+
+/* ====================================================
+   THEME E — LUXURY
+   ==================================================== */
+[data-theme="luxury"] {
+  --bg-primary: #0b0b12;
+  --bg-secondary: #111118;
+  --bg-tertiary: #1a1a24;
+  --text-primary: #f0ebe0;
+  --text-secondary: #9e9484;
+  --text-muted: #665e50;
+  --accent-1: #c9a84c;
+  --accent-2: #9a7b4f;
+  --border-color: rgba(201, 168, 76, 0.12);
+  --border-color-hover: rgba(201, 168, 76, 0.28);
+  --card-bg: #111118;
+  --card-border: 1px solid rgba(201, 168, 76, 0.12);
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Crimson Pro', serif;
+  --radius: 6px;
+  --radius-sm: 3px;
+  --radius-pill: 6px;
+  --tag-bg: rgba(201, 168, 76, 0.08);
+  --tag-text: #c9a84c;
+}
+
+/* ========== BACKGROUND EFFECTS ========== */
+
+[data-theme="brutalist"] body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 8px,
+    rgba(0,0,0,0.02) 8px,
+    rgba(0,0,0,0.02) 16px
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+[data-theme="editorial"] body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.015'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+[data-theme="neon"] body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 255, 163, 0.02) 2px,
+      rgba(0, 255, 163, 0.02) 4px
+    ),
+    linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+[data-theme="neon"] body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 50% 40% at 30% 20%, rgba(255,0,128,0.06), transparent),
+    radial-gradient(ellipse 50% 40% at 70% 80%, rgba(0,212,255,0.05), transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+[data-theme="luxury"] body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 50% -10%, rgba(201,168,76,0.06), transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+[data-theme="luxury"] body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ========== UTILITY CLASSES ========== */
+
+.card-shadow {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+}
+.card-shadow-hover:hover {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.06);
+}
+
+[data-theme="brutalist"] .card-shadow { box-shadow: 5px 5px 0px #0a0a0a; }
+[data-theme="brutalist"] .card-shadow-hover:hover { box-shadow: 8px 8px 0px #0a0a0a; }
+
+[data-theme="editorial"] .card-shadow { box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+[data-theme="editorial"] .card-shadow-hover:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+
+[data-theme="neon"] .card-shadow { box-shadow: 0 0 20px rgba(0,255,163,0.06), inset 0 1px 0 rgba(0,255,163,0.05); }
+[data-theme="neon"] .card-shadow-hover:hover { box-shadow: 0 0 40px rgba(0,255,163,0.12), 0 0 80px rgba(0,255,163,0.04); }
+
+[data-theme="luxury"] .card-shadow { box-shadow: 0 4px 24px rgba(0,0,0,0.3); }
+[data-theme="luxury"] .card-shadow-hover:hover { box-shadow: 0 8px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(201,168,76,0.08); }
+
+/* Glow utility for neon theme */
+.glow-text {
+  text-shadow: none;
+}
+[data-theme="neon"] .glow-text {
+  text-shadow: 0 0 12px rgba(0,255,163,0.4), 0 0 30px rgba(0,255,163,0.15);
+}
+[data-theme="neon"] .glow-accent {
+  text-shadow: 0 0 12px rgba(255,0,128,0.5), 0 0 30px rgba(255,0,128,0.2);
+}
+
+/* ========== SCROLLBAR ========== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-color-hover);
+}
+
+/* ========== NEON PULSE ========== */
+@keyframes neon-border-pulse {
+  0%, 100% { box-shadow: 0 0 5px rgba(0, 255, 163, 0.15), 0 0 10px rgba(0, 255, 163, 0.05); }
+  50% { box-shadow: 0 0 15px rgba(0, 255, 163, 0.25), 0 0 30px rgba(0, 255, 163, 0.08); }
+}
+[data-theme="neon"] .neon-pulse {
+  animation: neon-border-pulse 3s ease-in-out infinite;
+}
+
+/* ========== CUSTOM CURSOR ========== */
 .cursor-none,
 .cursor-none * {
-	cursor: none !important;
+  cursor: none !important;
 }
