@@ -154,38 +154,6 @@ export default function RoamingDuck() {
 
   return (
     <>
-      {/* Pixelated Nudge */}
-      {showNudge && (
-        <div
-          className="fixed z-[10000] pointer-events-none select-none"
-          style={getNudgeStyle()}
-        >
-          <div
-            className="animate-bounce"
-            style={{
-              fontFamily: '"Press Start 2P", "Courier New", monospace',
-              fontSize: isMobile ? "8px" : "10px",
-              color: "#fbbf24",
-              textShadow: `
-                2px 0 0 #78350f,
-                -2px 0 0 #78350f,
-                0 2px 0 #78350f,
-                0 -2px 0 #78350f,
-                1px 1px 0 #78350f,
-                -1px -1px 0 #78350f,
-                1px -1px 0 #78350f,
-                -1px 1px 0 #78350f
-              `,
-              letterSpacing: "1px",
-              whiteSpace: "nowrap",
-              imageRendering: "pixelated",
-            }}
-          >
-            {isMobile ? "▼ TAP ME! ▼" : "▼ CLICK ME! ▼"}
-          </div>
-        </div>
-      )}
-
       {/* Duck */}
       <div
         className="fixed z-[9999] cursor-pointer"
