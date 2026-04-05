@@ -74,8 +74,8 @@ function BrutalistHero() {
                                         <span className="font-bold">AI agents &amp; automation</span>.
                                         {' '}Worked with{' '}
                                         <span className="font-bold">clients</span>{' '}
-                                        <RoughNotation type="underline" color="#B8001F">
-                                            across the globe
+                                        <RoughNotation type="underline" color="#B8001F" multiline={true}>
+                                            <span className="whitespace-nowrap">across the globe</span>
                                         </RoughNotation>.
                                     </p>
                                 </div>
@@ -118,8 +118,8 @@ function BrutalistHero() {
                                     <span className="font-bold">AI agents &amp; automation</span>.
                                     {' '}Worked with{' '}
                                     <span className="font-bold">clients</span>{' '}
-                                    <RoughNotation type="underline" color="#B8001F">
-                                        across the globe
+                                    <RoughNotation type="underline" color="#B8001F" multiline={true}>
+                                        <span className="whitespace-nowrap">across the globe</span>
                                     </RoughNotation>.
                                 </p>
                             </div>
