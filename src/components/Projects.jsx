@@ -23,7 +23,7 @@ function ProjectImage({ src, alt, isBrutalist }) {
 	return (
 		<div ref={ref}>
 			<Image src={src} width={700} height={440} alt={alt}
-				className={`w-full h-auto object-cover transition-all duration-500 group-hover:scale-[1.03] ${
+				className={`w-full h-auto object-cover transition-transform md:transition-all duration-500 group-hover:scale-[1.03] ${
 					colored ? 'grayscale-0' : 'grayscale'
 				} md:group-hover:grayscale-0`}
 				unoptimized />
