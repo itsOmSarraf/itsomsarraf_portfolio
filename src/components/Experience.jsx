@@ -95,11 +95,18 @@ export default function Experiences() {
 										style={{ color: 'var(--text-primary)' }}>
 										{exp.title}
 									</h3>
-								<span
-										className="font-body text-xs whitespace-nowrap flex-shrink-0"
-										style={{ color: 'var(--text-primary)' }}>
-									{exp.duration}
-								</span>
+							<span className="font-body text-xs whitespace-nowrap flex-shrink-0">
+								{exp.duration.includes('Present') ? (
+									<>
+										<span style={{ color: 'var(--text-primary)' }}>
+											{exp.duration.split('Present')[0]}
+										</span>
+										<span className="font-semibold" style={{ color: '#e53e3e' }}>Present</span>
+									</>
+								) : (
+									<span style={{ color: 'var(--text-primary)' }}>{exp.duration}</span>
+								)}
+							</span>
 								</div>
 
 								<p className="font-body text-sm mb-3">
