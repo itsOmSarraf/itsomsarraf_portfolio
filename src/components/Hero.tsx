@@ -9,10 +9,10 @@ import { BsTwitterX, BsLinkedin, BsGithub, BsInstagram } from "react-icons/bs";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 const socials = [
-    { href: 'https://in.linkedin.com/in/itsomsarraf', Icon: BsLinkedin, label: 'LinkedIn' },
-    { href: 'https://x.com/itsOmSarraf_', Icon: BsTwitterX, label: 'X' },
     { href: 'https://github.com/itsomsarraf', Icon: BsGithub, label: 'GitHub' },
+    { href: 'https://x.com/itsOmSarraf_', Icon: BsTwitterX, label: 'X' },
     { href: 'https://instagram.com/itsomsarraf', Icon: BsInstagram, label: 'Instagram' },
+    { href: 'https://in.linkedin.com/in/itsomsarraf', Icon: BsLinkedin, label: 'LinkedIn' },
 ];
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
