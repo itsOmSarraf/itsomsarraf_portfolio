@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { GoArrowDownLeft } from "react-icons/go";
 import { BsTwitterX, BsLinkedin, BsGithub, BsInstagram } from "react-icons/bs";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
+import { useGrayscaleReveal } from "@/hooks/useGrayscaleReveal";
 
 const socials = [
     { href: 'https://github.com/itsomsarraf', Icon: BsGithub, label: 'GitHub' },
@@ -19,6 +20,8 @@ const socials = [
    BRUTALIST — massive type, marquee, raw square photo
    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 function BrutalistHero() {
+    const { ref: heroImgRef, colored: mobileColored } = useGrayscaleReveal();
+
     return (
         <section className="relative w-full min-h-screen flex flex-col" style={{ background: 'var(--bg-primary)' }}>
             <div className="overflow-hidden py-3 border-b-[3px]" style={{ borderColor: 'var(--border-color)' }}>
@@ -35,7 +38,6 @@ function BrutalistHero() {
             <div className="flex-1 flex items-center">
                 <div className="max-w-6xl mx-auto px-6 sm:px-10 w-full py-8 md:py-12">
                     {/* Mobile: name + big image side by side */}
-                    {/* Mobile: name + big image side by side */}
                     <div className="relative mb-3 md:hidden">
                         <div className="flex items-end gap-4">
                             <h1 className="font-heading text-[4rem] leading-[0.85] uppercase flex-shrink-0"
@@ -43,10 +45,11 @@ function BrutalistHero() {
                                 OM<br />SARRAF
                             </h1>
                             <div className="flex-1 ml-auto">
-                                <div className="w-full aspect-[3/4] max-w-[220px] ml-auto overflow-hidden border-[3px]"
+                                <div ref={heroImgRef} className="w-full aspect-[3/4] max-w-[220px] ml-auto overflow-hidden border-[3px]"
                                     style={{ borderColor: 'var(--text-primary)' }}>
                                     <Image src={OmSarraf} alt="Om Sarraf" width={300} height={400}
-                                        className="object-cover w-full h-full md:grayscale md:hover:grayscale-0 transition-all duration-100" priority />
+                                        className={`object-cover w-full h-full transition-all duration-500 ${mobileColored ? 'grayscale-0' : 'grayscale'}`}
+                                        priority />
                                 </div>
                             </div>
                         </div>
@@ -96,7 +99,7 @@ function BrutalistHero() {
                             <div className="w-full aspect-square overflow-hidden border-[4px]"
                                 style={{ borderColor: 'var(--text-primary)' }}>
                                 <Image src={OmSarraf} alt="Om Sarraf" width={500} height={500}
-                                    className="object-cover w-full h-full md:grayscale md:hover:grayscale-0 transition-all duration-100" priority />
+                                    className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-100" priority />
                             </div>
                         </div>
                     </div>

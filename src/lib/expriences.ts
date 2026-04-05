@@ -72,8 +72,8 @@ export const experiences = [
 		Sdate: '2025-06-01',
 		Edate: 'Present',
 		description: [
-			'Shipping production features for Samvaad, Sarvam\'s enterprise voice AI platform',
-			'Built embeddable voice agent, contributed to the website and random POCs for client demos',
+			'Building and Breaking Samvaad, Sarvam\'s enterprise voice AI platform',
+			'Built embeddable voice agent, contributed to the website and random POCs for client demos, and internal ui library',
 			'Owning end-to-end frontend and backend delivery for billing, Slack alerts, and campaign analytics, etc'
 		],
 		url: 'https://sarvam.ai/',
