@@ -54,14 +54,14 @@ export default function ProjectsPage() {
 						whileInView={{ opacity: 1, y: 0 }}
 						viewport={{ once: true, margin: '-60px' }}
 						transition={{ duration: 0.55, ease: [0.25, 0.4, 0.25, 1] }}
-						className={`flex flex-col ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 md:gap-10 mb-16 md:mb-24 items-center`}>
+						className={`group flex flex-col ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 md:gap-10 mb-16 md:mb-24 items-center`}>
 
 						<div className="w-full md:w-[55%]">
 							<a
 								href={p.deployedLink || p.githubLink}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="block overflow-hidden rounded-theme group card-shadow card-shadow-hover"
+								className="block overflow-hidden rounded-theme card-shadow card-shadow-hover"
 								style={{ border: 'var(--card-border)' }}>
 								<ProjectImage src={p.imagePath} alt={p.name} isBrutalist={isBrutalist} />
 							</a>

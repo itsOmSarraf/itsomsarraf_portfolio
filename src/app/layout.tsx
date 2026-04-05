@@ -3,7 +3,6 @@ import './globals.css'
 import CustomCursor from "@/components/CustomeCursor";
 import RoamingDuck from "@/components/RoamingDuck";
 import { ThemeProvider } from "@/context/ThemeContext";
-// import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 export const metadata: Metadata = {
   title: "Om Sarraf | FullStack Developer",
@@ -41,7 +40,6 @@ export default function RootLayout({
           <div className="relative z-10">
             {children}
           </div>
-          {/* <ThemeSwitcher /> */}
           <CustomCursor />
           <RoamingDuck />
         </ThemeProvider>
