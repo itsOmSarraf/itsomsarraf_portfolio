@@ -10,7 +10,7 @@ import { useTheme } from '@/context/ThemeContext';
 function ProjectImage({ src, alt, isBrutalist }) {
 	return (
 		<Image src={src} width={700} height={440} alt={alt}
-			className={`w-full h-auto object-cover transition-all duration-500 group-hover:scale-[1.03] ${
+			className={`w-full h-auto object-cover transition-[transform,filter] duration-500 group-hover:scale-[1.03] ${
 				isBrutalist ? 'md:grayscale md:group-hover:grayscale-0' : ''
 			}`}
 			unoptimized />
