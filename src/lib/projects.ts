@@ -1,5 +1,15 @@
 export const dummyProjects = [
 	{
+		name: 'Shift Foundation',
+		imagePath:
+			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/main/src/public/shiftfdn.png',
+		techStack: 'Nextjs, TailwindCSS',
+		githubLink: '',
+		deployedLink: 'https://shiftfdn.com',
+		description:
+			'Developed complete frontend for a Singapore based Web3 company building a validator-free blockchain protocol enabling truly peer-to-peer transactions with zero fees and instant settlement.'
+	},
+	{
 		name: 'Subly - Create Subliminals',
 		imagePath:
 			'https://raw.githubusercontent.com/itsOmSarraf/itsomsarraf_portfolio/refs/heads/main/src/public/subly.png',
@@ -10,7 +20,6 @@ export const dummyProjects = [
 		description:
 			'An affirmations app that allows you to create your own subliminal messages and play them on your device. Acquired 1400+ users.'
 	},
-
 	{
 		name: 'TopNode',
 		imagePath:
